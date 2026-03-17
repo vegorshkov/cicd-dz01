@@ -1,0 +1,799 @@
+Build 'netology / example-teamcity-build' #2
+Triggered 2026-03-16 10:02:16 by 'admin'
+Started 2026-03-16 10:02:18 on agent 'teamcity-agent'
+Finished 2026-03-16 10:02:50 with status NORMAL 'Tests passed: 5'
+VCS revisions: 'Netology_HttpsGithubComVegorshkovExampleTeamcity' (Git, instance id 1): '4021122cb6e240aed22836bdae96954fd0c4b9f4' (branch: 'refs/heads/master')
+TeamCity URL http://62.84.118.135:8111/buildConfiguration/Netology_ExampleTeamcityBuild/101 
+TeamCity server version is 2025.11.3 (build 208117), server timezone: GMT (UTC)
+Log entries are grouped by flowIds, so they might not be fully ordered by timestamps
+
+[10:02:16]W: bt1 (33s)
+[10:02:16]i: TeamCity server version is 2025.11.3 (build 208117)
+[10:02:16] : Finalize build settings
+[10:02:17] : The build is removed from the queue to be prepared for the start
+[10:02:17] : Collecting changes in 1 VCS root
+[10:02:17] :	 [Collecting changes in 1 VCS root] VCS Root details
+[10:02:17] :		 [VCS Root details] "https://github.com/vegorshkov/example-teamcity" {instance id=1, parent internal id=1, parent id=Netology_HttpsGithubComVegorshkovExampleTeamcity, description: "https://github.com/vegorshkov/example-teamcity#refs/heads/master"}
+[10:02:17]i:	 [Collecting changes in 1 VCS root] Loading current repository state for VCS root 'https://github.com/vegorshkov/example-teamcity'
+[10:02:17]i:		 [Loading current repository state for VCS root 'https://github.com/vegorshkov/example-teamcity'] VCS root 'https://github.com/vegorshkov/example-teamcity': git -c credential.helper= -c credential.helper=/opt/teamcity/temp/credHelper15477780084472486209.sh ls-remote origin
+[10:02:18]i:	 [Collecting changes in 1 VCS root] Detecting changes in VCS root 'https://github.com/vegorshkov/example-teamcity' (used in 'example-teamcity-build')
+[10:02:18]i:	 [Collecting changes in 1 VCS root] Will collect changes for 'https://github.com/vegorshkov/example-teamcity' starting from revision 4021122cb6e240aed22836bdae96954fd0c4b9f4
+[10:02:18] : Compute revision for 'https://github.com/vegorshkov/example-teamcity'
+[10:02:18] :	 [Compute revision for 'https://github.com/vegorshkov/example-teamcity'] Upper limit revision: 4021122cb6e240aed22836bdae96954fd0c4b9f4
+[10:02:18]i:	 [Compute revision for 'https://github.com/vegorshkov/example-teamcity'] MaxModId = null
+[10:02:18] :	 [Compute revision for 'https://github.com/vegorshkov/example-teamcity'] Cannot find modification in TeamCity database with revision 4021122cb6e240aed22836bdae96954fd0c4b9f4
+[10:02:18] :	 [Compute revision for 'https://github.com/vegorshkov/example-teamcity'] Computed revision: 4021122cb6e240aed22836bdae96954fd0c4b9f4
+[10:02:18] : Starting the build on the agent "teamcity-agent"
+[10:02:19]i: Agent time zone: Etc/UTC
+[10:02:19]i: Agent is running under JRE: 1.8.0_482-8u482-ga~us1-0ubuntu1~22.04-b08
+[10:02:19] : Updating tools for build
+[10:02:19] :	 [Updating tools for build] Found 1 tool used by the build: maven3_9
+[10:02:19] :	 [Updating tools for build] Tool maven3_9 updated successfully
+[10:02:19] : Clearing temporary directory: /opt/teamcity-agent/temp/buildTmp
+[10:02:19]i: Preparing performance monitoring data directory: /opt/teamcity-agent/system/perfmon
+[10:02:19]i: Performance monitor is using command line: [perl, /opt/teamcity-agent/system/perfmon/scripts/vmstatlinux.pl, /opt/teamcity-agent/system/perfmon/temp/101/perfmon.csv, 1000]
+[10:02:19]i: Starting performance monitoring process
+[10:02:20]i: Performance monitoring process started
+[10:02:20] : Publishing internal artifacts
+[10:02:20] :	 [Publishing internal artifacts] Publishing 1 file using [WebPublisher]
+[10:02:20] :	 [Publishing internal artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]
+[10:02:20]i:	 [Publishing internal artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[10:02:20] : Full checkout enforced. Reason: [Checkout directory is empty or doesn't exist]
+[10:02:20] : Will perform clean checkout. Reason: Checkout directory is empty or doesn't exist
+[10:02:20] : Checkout directory: /opt/teamcity-agent/work/5871d05f33387ade
+[10:02:20] : Updating sources: auto checkout (on agent) (6s)
+[10:02:20] :	 [Updating sources] Will use agent side checkout
+[10:02:20] :	 [Updating sources] VCS Root: https://github.com/vegorshkov/example-teamcity (6s)
+[10:02:20] :		 [VCS Root: https://github.com/vegorshkov/example-teamcity] revision: 4021122cb6e240aed22836bdae96954fd0c4b9f4
+[10:02:20]i:		 [VCS Root: https://github.com/vegorshkov/example-teamcity] Mirrors automatically enabled
+[10:02:20] :		 [VCS Root: https://github.com/vegorshkov/example-teamcity] Git version: 2.34.1.0
+[10:02:20] :		 [VCS Root: https://github.com/vegorshkov/example-teamcity] Update git mirror (/opt/teamcity-agent/system/git/git-A1E3EC2E.git) (5s)
+[10:02:20] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-A1E3EC2E.git)] /usr/bin/git init --bare --initial-branch=main
+[10:02:23] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-A1E3EC2E.git)] /usr/bin/git config http.sslCAInfo
+[10:02:23] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-A1E3EC2E.git)] Local clone state requires 'git fetch'.
+[10:02:23] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-A1E3EC2E.git)] /usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master (2s)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Enumerating objects: 357, done.        
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  25% (1/4)        
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  50% (2/4)        
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  75% (3/4)        
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects: 100% (4/4)        
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects: 100% (4/4), done.        
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Compressing objects:  25% (1/4)        
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Compressing objects:  50% (2/4)        
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Compressing objects:  75% (3/4)        
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Compressing objects: 100% (4/4)        
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Compressing objects: 100% (4/4), done.        
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:   0% (1/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:   1% (4/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:   2% (8/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:   3% (11/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:   4% (15/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:   5% (18/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:   6% (22/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:   7% (25/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:   8% (29/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:   9% (33/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  10% (36/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  11% (40/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  12% (43/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  13% (47/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  14% (50/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  15% (54/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  16% (58/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  17% (61/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  18% (65/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  19% (68/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  20% (72/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  21% (75/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  22% (79/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  23% (83/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  24% (86/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  25% (90/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  26% (93/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  27% (97/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  28% (100/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  29% (104/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  30% (108/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  31% (111/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  32% (115/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  33% (118/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  34% (122/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  35% (125/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  36% (129/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  37% (133/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  38% (136/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  39% (140/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  40% (143/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  41% (147/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  42% (150/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  43% (154/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  44% (158/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  45% (161/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  46% (165/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  47% (168/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  48% (172/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  49% (175/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  50% (179/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  51% (183/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  52% (186/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  53% (190/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  54% (193/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  55% (197/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  56% (200/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  57% (204/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  58% (208/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  59% (211/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  60% (215/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  61% (218/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  62% (222/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  63% (225/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  64% (229/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  65% (233/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  66% (236/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  67% (240/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  68% (243/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  69% (247/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  70% (250/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  71% (254/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  72% (258/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  73% (261/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  74% (265/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  75% (268/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  76% (272/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  77% (275/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  78% (279/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  79% (283/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  80% (286/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  81% (290/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  82% (293/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  83% (297/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  84% (300/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  85% (304/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  86% (308/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Total 357 (delta 1), reused 0 (delta 0), pack-reused 353 (from 2)        
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  87% (311/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  88% (315/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  89% (318/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  90% (322/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  91% (325/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  92% (329/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  93% (333/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  94% (336/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  95% (340/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  96% (343/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  97% (347/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  98% (350/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects:  99% (354/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects: 100% (357/357)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Receiving objects: 100% (357/357), 49.42 KiB | 581.00 KiB/s, done.
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:   0% (0/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:   1% (2/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:   2% (3/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:   3% (4/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:   4% (5/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:   5% (6/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:   6% (7/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:   7% (8/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:   8% (10/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:   9% (11/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  10% (12/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  11% (13/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  12% (14/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  13% (15/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  14% (16/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  15% (17/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  16% (19/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  17% (20/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  18% (21/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  19% (22/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  20% (23/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  21% (24/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  22% (25/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  23% (26/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  24% (28/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  25% (29/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  26% (30/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  27% (31/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  28% (32/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  29% (33/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  30% (34/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  31% (36/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  32% (37/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  33% (38/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  34% (39/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  35% (40/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  36% (41/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  37% (42/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  38% (43/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  39% (45/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  40% (46/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  41% (47/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  42% (48/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  43% (49/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  44% (50/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  45% (51/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  46% (52/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  47% (54/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  48% (55/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  49% (56/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  50% (57/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  51% (58/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  52% (59/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  53% (60/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  54% (62/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  55% (63/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  56% (64/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  57% (65/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  58% (66/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  59% (67/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  60% (68/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  61% (69/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  62% (71/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  63% (72/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  64% (73/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  65% (74/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  66% (75/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  67% (76/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  68% (77/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  69% (78/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  70% (80/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  71% (81/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  72% (82/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  73% (83/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  74% (84/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  75% (85/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  76% (86/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  77% (88/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  78% (89/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  79% (90/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  80% (91/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  81% (92/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  82% (93/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  83% (94/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  84% (95/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  85% (97/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  86% (98/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  87% (99/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  88% (100/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  89% (101/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  90% (102/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  91% (103/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  92% (104/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  93% (106/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  94% (107/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  95% (108/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  96% (109/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  97% (110/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  98% (111/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas:  99% (112/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas: 100% (113/113)
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] Resolving deltas: 100% (113/113), done.
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] From https://github.com/vegorshkov/example-teamcity
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master]  * [new branch]      master     -> master
+[10:02:26]i:				 [/usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper8823780988377228006.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master]  * [new branch]      master     -> origin/master
+[10:02:26] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-A1E3EC2E.git)] /usr/bin/git log -n1 --pretty=format:%H%x20%s 4021122cb6e240aed22836bdae96954fd0c4b9f4 --
+[10:02:26] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-A1E3EC2E.git)] /usr/bin/git pack-refs --all
+[10:02:26] :		 [VCS Root: https://github.com/vegorshkov/example-teamcity] Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)
+[10:02:26] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] The .git directory is missing in '/opt/teamcity-agent/work/5871d05f33387ade'. Running 'git init'...
+[10:02:26] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git init --initial-branch=main
+[10:02:26] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git config lfs.storage /opt/teamcity-agent/system/git/git-A1E3EC2E.git/lfs
+[10:02:26] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git config core.sparseCheckout true
+[10:02:26] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git config http.sslCAInfo
+[10:02:26] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git show-ref
+[10:02:26] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper3502976900420975720.sh ls-remote origin
+[10:02:26] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git show-ref refs/remotes/origin/master
+[10:02:26] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git log -n1 --pretty=format:%H%x20%s 4021122cb6e240aed22836bdae96954fd0c4b9f4 --
+[10:02:26] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] No 'git fetch' required: commit '4021122cb6e240aed22836bdae96954fd0c4b9f4' is in the local repository clone pointed by 'refs/remotes/origin/master'.
+[10:02:26] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git branch
+[10:02:26] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git update-ref refs/heads/master 4021122cb6e240aed22836bdae96954fd0c4b9f4
+[10:02:26] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4638371462198978561.sh checkout -q -f master
+[10:02:26] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git branch --set-upstream-to=refs/remotes/origin/master
+[10:02:26] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] Cleaning https://github.com/vegorshkov/example-teamcity in /opt/teamcity-agent/work/5871d05f33387ade the file set ALL_UNTRACKED
+[10:02:26] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git clean -f -d -x
+[10:02:26] : Build preparation done
+[10:02:26]W: Step 1/1: Maven (16s)
+[10:02:27] :	 [Step 1/1] Initial M2_HOME not set
+[10:02:27] :	 [Step 1/1] Current M2_HOME = /opt/teamcity-agent/tools/maven3_9
+[10:02:27] :	 [Step 1/1] PATH = /opt/teamcity-agent/tools/maven3_9/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+[10:02:27] :	 [Step 1/1] Using watcher: /opt/teamcity-agent/plugins/mavenPlugin/maven-watcher-jdk17/maven-watcher-agent.jar
+[10:02:27] :	 [Step 1/1] Using agent local repository at /opt/teamcity-agent/system/jetbrains.maven.runner/maven.repo.local
+[10:02:27] :	 [Step 1/1] *** Start reading the project structure ***
+[10:02:27]i:	 [Step 1/1] Initial MAVEN_OPTS not set
+[10:02:27]i:	 [Step 1/1] Current MAVEN_OPTS not set
+[10:02:29]i:	 [Step 1/1] [INFO] Scanning for projects...
+[10:02:29]i:	 [Step 1/1] [INFO] Downloading from teamcity_maven_local_plugin_repo: file:/opt/teamcity-agent/plugins/mavenPlugin/info-plugin/org/jetbrains/maven/info-maven3-plugin/1.4.8/info-maven3-plugin-1.4.8.pom
+[10:02:29]i:	 [Step 1/1] [INFO] Downloaded from teamcity_maven_local_plugin_repo: file:/opt/teamcity-agent/plugins/mavenPlugin/info-plugin/org/jetbrains/maven/info-maven3-plugin/1.4.8/info-maven3-plugin-1.4.8.pom (1.5 kB at 28 kB/s)
+[10:02:29]i:	 [Step 1/1] [INFO] Downloading from teamcity_maven_local_plugin_repo: file:/opt/teamcity-agent/plugins/mavenPlugin/info-plugin/org/jetbrains/maven/info-maven3-plugin/1.4.8/info-maven3-plugin-1.4.8.jar
+[10:02:29]i:	 [Step 1/1] [INFO] Downloaded from teamcity_maven_local_plugin_repo: file:/opt/teamcity-agent/plugins/mavenPlugin/info-plugin/org/jetbrains/maven/info-maven3-plugin/1.4.8/info-maven3-plugin-1.4.8.jar (11 kB at 525 kB/s)
+[10:02:29]i:	 [Step 1/1] [INFO] 
+[10:02:29]i:	 [Step 1/1] [INFO] -----------------------< org.netology:plaindoll >-----------------------
+[10:02:29]i:	 [Step 1/1] [INFO] Building plaindoll 0.0.2
+[10:02:29]i:	 [Step 1/1] [INFO]   from info.6982766317707575873.pom.xml
+[10:02:29]i:	 [Step 1/1] [INFO] --------------------------------[ jar ]---------------------------------
+[10:02:29]i:	 [Step 1/1] [INFO] 
+[10:02:29]i:	 [Step 1/1] [INFO] --- info3:1.4.8:info (default-cli) @ plaindoll ---
+[10:02:29]i:	 [Step 1/1] [INFO] Downloading from teamcity_maven_local_plugin_repo: file:/opt/teamcity-agent/plugins/mavenPlugin/info-plugin/org/jetbrains/maven/maven-embedder-api/1.4.2/maven-embedder-api-1.4.2.pom
+[10:02:29]i:	 [Step 1/1] [INFO] Downloaded from teamcity_maven_local_plugin_repo: file:/opt/teamcity-agent/plugins/mavenPlugin/info-plugin/org/jetbrains/maven/maven-embedder-api/1.4.2/maven-embedder-api-1.4.2.pom (1.2 kB at 58 kB/s)
+[10:02:29]i:	 [Step 1/1] [INFO] Downloading from teamcity_maven_local_plugin_repo: file:/opt/teamcity-agent/plugins/mavenPlugin/info-plugin/xerces/xercesImpl/2.12.2/xercesImpl-2.12.2.pom
+[10:02:29]i:	 [Step 1/1] [INFO] Downloaded from teamcity_maven_local_plugin_repo: file:/opt/teamcity-agent/plugins/mavenPlugin/info-plugin/xerces/xercesImpl/2.12.2/xercesImpl-2.12.2.pom (3.3 kB at 143 kB/s)
+[10:02:29]i:	 [Step 1/1] [INFO] Downloading from teamcity_maven_local_plugin_repo: file:/opt/teamcity-agent/plugins/mavenPlugin/info-plugin/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.pom
+[10:02:29]i:	 [Step 1/1] [INFO] Downloaded from teamcity_maven_local_plugin_repo: file:/opt/teamcity-agent/plugins/mavenPlugin/info-plugin/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.pom (2.7 kB at 333 kB/s)
+[10:02:29]i:	 [Step 1/1] [INFO] Downloading from teamcity_maven_local_plugin_repo: file:/opt/teamcity-agent/plugins/mavenPlugin/info-plugin/org/apache/logging/log4j/log4j-api/2.17.2/log4j-api-2.17.2.pom
+[10:02:29]i:	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.17.2/log4j-api-2.17.2.pom
+[10:02:30]i:	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.17.2/log4j-api-2.17.2.pom (14 kB at 29 kB/s)
+[10:02:30]i:	 [Step 1/1] [INFO] Downloading from teamcity_maven_local_plugin_repo: file:/opt/teamcity-agent/plugins/mavenPlugin/info-plugin/org/apache/logging/log4j/log4j/2.17.2/log4j-2.17.2.pom
+[10:02:30]i:	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j/2.17.2/log4j-2.17.2.pom
+[10:02:30]i:	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j/2.17.2/log4j-2.17.2.pom (73 kB at 1.8 MB/s)
+[10:02:30]i:	 [Step 1/1] [INFO] Downloading from teamcity_maven_local_plugin_repo: file:/opt/teamcity-agent/plugins/mavenPlugin/info-plugin/org/apache/logging/logging-parent/5/logging-parent-5.pom
+[10:02:30]i:	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/logging/logging-parent/5/logging-parent-5.pom
+[10:02:30]i:	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/logging/logging-parent/5/logging-parent-5.pom (3.3 kB at 73 kB/s)
+[10:02:30]i:	 [Step 1/1] [INFO] Downloading from teamcity_maven_local_plugin_repo: file:/opt/teamcity-agent/plugins/mavenPlugin/info-plugin/org/apache/apache/24/apache-24.pom
+[10:02:30]i:	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/24/apache-24.pom
+[10:02:30]i:	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/24/apache-24.pom (20 kB at 492 kB/s)
+[10:02:30]i:	 [Step 1/1] [INFO] Downloading from teamcity_maven_local_plugin_repo: file:/opt/teamcity-agent/plugins/mavenPlugin/info-plugin/org/jetbrains/maven/maven-embedder-api/1.4.2/maven-embedder-api-1.4.2.jar
+[10:02:30]i:	 [Step 1/1] [INFO] Downloaded from teamcity_maven_local_plugin_repo: file:/opt/teamcity-agent/plugins/mavenPlugin/info-plugin/org/jetbrains/maven/maven-embedder-api/1.4.2/maven-embedder-api-1.4.2.jar (32 kB at 1.8 MB/s)
+[10:02:30]i:	 [Step 1/1] [INFO] Downloading from teamcity_maven_local_plugin_repo: file:/opt/teamcity-agent/plugins/mavenPlugin/info-plugin/xerces/xercesImpl/2.12.2/xercesImpl-2.12.2.jar
+[10:02:30]i:	 [Step 1/1] [INFO] Downloading from teamcity_maven_local_plugin_repo: file:/opt/teamcity-agent/plugins/mavenPlugin/info-plugin/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar
+[10:02:30]i:	 [Step 1/1] [INFO] Downloading from teamcity_maven_local_plugin_repo: file:/opt/teamcity-agent/plugins/mavenPlugin/info-plugin/org/apache/logging/log4j/log4j-api/2.17.2/log4j-api-2.17.2.jar
+[10:02:30]i:	 [Step 1/1] [INFO] Downloaded from teamcity_maven_local_plugin_repo: file:/opt/teamcity-agent/plugins/mavenPlugin/info-plugin/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar (221 kB at 4.7 MB/s)
+[10:02:30]i:	 [Step 1/1] [INFO] Downloaded from teamcity_maven_local_plugin_repo: file:/opt/teamcity-agent/plugins/mavenPlugin/info-plugin/xerces/xercesImpl/2.12.2/xercesImpl-2.12.2.jar (1.4 MB at 15 MB/s)
+[10:02:30]i:	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.17.2/log4j-api-2.17.2.jar
+[10:02:30]i:	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.17.2/log4j-api-2.17.2.jar (303 kB at 6.4 MB/s)
+[10:02:30]i:	 [Step 1/1] [INFO] ------------------------------------------------------------------------
+[10:02:30]i:	 [Step 1/1] [INFO] BUILD SUCCESS
+[10:02:30]i:	 [Step 1/1] [INFO] ------------------------------------------------------------------------
+[10:02:30]i:	 [Step 1/1] [INFO] Total time:  1.627 s
+[10:02:30]i:	 [Step 1/1] [INFO] Finished at: 2026-03-16T10:02:30Z
+[10:02:30]i:	 [Step 1/1] [INFO] ------------------------------------------------------------------------
+[10:02:30]i:	 [Step 1/1] Process exited with code 0
+[10:02:30] :	 [Step 1/1] Initial MAVEN_OPTS not set
+[10:02:30] :	 [Step 1/1] Current MAVEN_OPTS not set
+[10:02:30] :	 [Step 1/1] Starting: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -Dagent.home.dir=/opt/teamcity-agent -Dagent.name=teamcity-agent -Dagent.ownPort=9091 -Dagent.work.dir=/opt/teamcity-agent/work -Dbuild.number=2 -Dbuild.vcs.number=4021122cb6e240aed22836bdae96954fd0c4b9f4 -Dbuild.vcs.number.1=4021122cb6e240aed22836bdae96954fd0c4b9f4 -Dbuild.vcs.number.Netology_HttpsGithubComVegorshkovExampleTeamcity=4021122cb6e240aed22836bdae96954fd0c4b9f4 -Dclassworlds.conf=/opt/teamcity-agent/temp/buildTmp/teamcity.m2.conf -Dcom.jetbrains.maven.watcher.report.file=/opt/teamcity-agent/temp/buildTmp/maven-build-info.xml -Djava.io.tmpdir=/opt/teamcity-agent/temp/buildTmp -Dmaven.home=/opt/teamcity-agent/tools/maven3_9 -Dmaven.multiModuleProjectDirectory=/opt/teamcity-agent/work/5871d05f33387ade -Dteamcity.agent.cpuBenchmark=411 -Dteamcity.auth.password=******* -Dteamcity.auth.userId=TeamCityBuildId=101 -Dteamcity.build.changedFiles.file=/opt/teamcity-agent/temp/buildTmp/teamcity.changedFiles.txt -Dteamcity.build.checkoutDir=/opt/teamcity-agent/work/5871d05f33387ade -Dteamcity.build.id=101 -Dteamcity.build.properties.file=/opt/teamcity-agent/temp/buildTmp/teamcity.build.parameters -Dteamcity.build.properties.file.checksum=/opt/teamcity-agent/temp/buildTmp/teamcity.build.parameters.checksum -Dteamcity.build.tempDir=/opt/teamcity-agent/temp/buildTmp -Dteamcity.build.workingDir=/opt/teamcity-agent/work/5871d05f33387ade -Dteamcity.buildConfName=example-teamcity-build -Dteamcity.buildType.id=Netology_ExampleTeamcityBuild -Dteamcity.configuration.properties.file=/opt/teamcity-agent/temp/buildTmp/teamcity.config.parameters -Dteamcity.maven.watcher.home=/opt/teamcity-agent/plugins/mavenPlugin/maven-watcher-jdk17 -Dteamcity.projectName=netology -Dteamcity.runner.properties.file=/opt/teamcity-agent/temp/buildTmp/teamcity.runner.parameters -Dteamcity.tests.recentlyFailedTests.file=/opt/teamcity-agent/temp/buildTmp/teamcity.testsToRunFirst.txt -Dteamcity.version=2025.11.3 (build 208117) -Dmaven.repo.local=/opt/teamcity-agent/system/jetbrains.maven.runner/maven.repo.local -classpath /opt/teamcity-agent/tools/maven3_9/boot/plexus-classworlds-2.7.0.jar: org.codehaus.plexus.classworlds.launcher.Launcher -f /opt/teamcity-agent/work/5871d05f33387ade/pom.xml -B -Dmaven.test.failure.ignore=true clean test
+[10:02:30] :	 [Step 1/1] in directory: /opt/teamcity-agent/work/5871d05f33387ade
+[10:02:32] :	 [Step 1/1] [INFO] Scanning for projects...
+[10:02:32] :	 [Step 1/1] [INFO] 
+[10:02:32] :	 [Step 1/1] [INFO] -----------------------< org.netology:plaindoll >-----------------------
+[10:02:32] :	 [Step 1/1] [INFO] Building plaindoll 0.0.2
+[10:02:32] :	 [Step 1/1] [INFO]   from pom.xml
+[10:02:32] :	 [Step 1/1] [INFO] --------------------------------[ jar ]---------------------------------
+[10:02:32] :	 [Step 1/1] [Maven Watcher] project started: org.netology:plaindoll:jar:0.0.2
+[10:02:32] :	 [Step 1/1] org.netology:plaindoll (11s)
+[10:02:32]i:		 [org.netology:plaindoll] ##teamcity[importData tc:tags='tc:internal' type='surefire' path='/opt/teamcity-agent/work/5871d05f33387ade/target/failsafe-reports/TEST-*.xml' whenNoDataPublished='nothing' logAsInternal='true' rerunFailingTestsEnabled='false']
+[10:02:32]i:		 [org.netology:plaindoll] ##teamcity[importData tc:tags='tc:internal' type='surefire' path='/opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports/TEST-*.xml' whenNoDataPublished='nothing' logAsInternal='true' rerunFailingTestsEnabled='false']
+[10:02:32] :	 [Step 1/1] Importing data from '/opt/teamcity-agent/work/5871d05f33387ade/target/failsafe-reports/TEST-*.xml' with 'surefire' processor
+[10:02:32] :	 [Step 1/1] Importing data from '/opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports/TEST-*.xml' with 'surefire' processor
+[10:02:32] :	 [Step 1/1] [Maven Watcher] 
+[10:02:32]i:	 [Step 1/1] ##teamcity[projectStarted tc:tags='tc:internal' projectId='org.netology:plaindoll:jar:0.0.2' groupId='org.netology' artifactId='plaindoll' testReportsDir0='/opt/teamcity-agent/work/5871d05f33387ade/target/failsafe-reports' testReportsDir1='/opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports']
+[10:02:32] :	 [Step 1/1] Surefire report watcher
+[10:02:32] :		 [Surefire report watcher] Watching paths:
+[10:02:32] :		 [Surefire report watcher] /opt/teamcity-agent/work/5871d05f33387ade/target/failsafe-reports/TEST-*.xml
+[10:02:32] :	 [Step 1/1] Surefire report watcher
+[10:02:32] :		 [Surefire report watcher] Watching paths:
+[10:02:32] :		 [Surefire report watcher] /opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports/TEST-*.xml
+[10:02:32] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.2.0/maven-clean-plugin-3.2.0.pom
+[10:02:32] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.2.0/maven-clean-plugin-3.2.0.pom (5.3 kB at 17 kB/s)
+[10:02:32] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/35/maven-plugins-35.pom
+[10:02:33] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/35/maven-plugins-35.pom (9.9 kB at 215 kB/s)
+[10:02:33] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/35/maven-parent-35.pom
+[10:02:33] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/35/maven-parent-35.pom (45 kB at 1.0 MB/s)
+[10:02:33] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/25/apache-25.pom
+[10:02:33] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/25/apache-25.pom (21 kB at 446 kB/s)
+[10:02:33] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.2.0/maven-clean-plugin-3.2.0.jar
+[10:02:33] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.2.0/maven-clean-plugin-3.2.0.jar (36 kB at 939 kB/s)
+[10:02:33] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/3.3.1/maven-resources-plugin-3.3.1.pom
+[10:02:33] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/3.3.1/maven-resources-plugin-3.3.1.pom (8.2 kB at 240 kB/s)
+[10:02:33] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/39/maven-plugins-39.pom
+[10:02:33] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/39/maven-plugins-39.pom (8.1 kB at 270 kB/s)
+[10:02:33] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom
+[10:02:33] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom (48 kB at 1.3 MB/s)
+[10:02:33] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom
+[10:02:33] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom (21 kB at 493 kB/s)
+[10:02:33] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/3.3.1/maven-resources-plugin-3.3.1.jar
+[10:02:33] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/3.3.1/maven-resources-plugin-3.3.1.jar (31 kB at 998 kB/s)
+[10:02:33] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.pom
+[10:02:33] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.pom (9.8 kB at 317 kB/s)
+[10:02:33] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.jar
+[10:02:33] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.jar (66 kB at 2.3 MB/s)
+[10:02:33] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.2.2/maven-surefire-plugin-3.2.2.pom
+[10:02:33] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.2.2/maven-surefire-plugin-3.2.2.pom (5.1 kB at 143 kB/s)
+[10:02:33] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/3.2.2/surefire-3.2.2.pom
+[10:02:33] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/3.2.2/surefire-3.2.2.pom (21 kB at 667 kB/s)
+[10:02:33] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/40/maven-parent-40.pom
+[10:02:33] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/40/maven-parent-40.pom (49 kB at 1.5 MB/s)
+[10:02:33] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/30/apache-30.pom
+[10:02:33] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/30/apache-30.pom (23 kB at 628 kB/s)
+[10:02:33] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.9.3/junit-bom-5.9.3.pom
+[10:02:33] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.9.3/junit-bom-5.9.3.pom (5.6 kB at 176 kB/s)
+[10:02:33] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.2.2/maven-surefire-plugin-3.2.2.jar
+[10:02:33] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.2.2/maven-surefire-plugin-3.2.2.jar (45 kB at 1.4 MB/s)
+[10:02:33] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/4.12/junit-4.12.pom
+[10:02:33] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/4.12/junit-4.12.pom (24 kB at 677 kB/s)
+[10:02:33] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.pom
+[10:02:33] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.pom (766 B at 22 kB/s)
+[10:02:33] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-parent/1.3/hamcrest-parent-1.3.pom
+[10:02:33] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-parent/1.3/hamcrest-parent-1.3.pom (2.0 kB at 60 kB/s)
+[10:02:33] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/4.12/junit-4.12.jar
+[10:02:33] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/4.12/junit-4.12.jar (315 kB at 5.0 MB/s)
+[10:02:33] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+[10:02:33] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar (45 kB at 1.4 MB/s)
+[10:02:33] :	 [Step 1/1] [INFO] 
+[10:02:33] :	 [Step 1/1] [INFO] --- clean:3.2.0:clean (default-clean) @ plaindoll ---
+[10:02:34] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.pom
+[10:02:34] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.pom (5.8 kB at 139 kB/s)
+[10:02:34] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/34/maven-shared-components-34.pom
+[10:02:34] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/34/maven-shared-components-34.pom (5.1 kB at 127 kB/s)
+[10:02:34] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/34/maven-parent-34.pom
+[10:02:34] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/34/maven-parent-34.pom (43 kB at 931 kB/s)
+[10:02:34] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/23/apache-23.pom
+[10:02:34] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/23/apache-23.pom (18 kB at 576 kB/s)
+[10:02:34] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.pom
+[10:02:34] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.pom (14 kB at 396 kB/s)
+[10:02:34] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/42/commons-parent-42.pom
+[10:02:34] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/42/commons-parent-42.pom (68 kB at 1.7 MB/s)
+[10:02:34] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/18/apache-18.pom
+[10:02:34] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/18/apache-18.pom (16 kB at 412 kB/s)
+[10:02:34] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.jar
+[10:02:34] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.jar (153 kB at 3.5 MB/s)
+[10:02:34] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.jar
+[10:02:34] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.jar (215 kB at 5.2 MB/s)
+[10:02:34] :	 [Step 1/1] [INFO] 
+[10:02:34] :	 [Step 1/1] [INFO] --- resources:3.3.1:resources (default-resources) @ plaindoll ---
+[10:02:34] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.26/plexus-interpolation-1.26.pom
+[10:02:34] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.26/plexus-interpolation-1.26.pom (2.7 kB at 68 kB/s)
+[10:02:34] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/5.1/plexus-5.1.pom
+[10:02:34] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/5.1/plexus-5.1.pom (23 kB at 549 kB/s)
+[10:02:34] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.pom
+[10:02:34] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.pom (8.8 kB at 302 kB/s)
+[10:02:34] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/10/plexus-10.pom
+[10:02:34] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/10/plexus-10.pom (25 kB at 668 kB/s)
+[10:02:34] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/3.3.1/maven-filtering-3.3.1.pom
+[10:02:34] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/3.3.1/maven-filtering-3.3.1.pom (6.0 kB at 140 kB/s)
+[10:02:34] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/39/maven-shared-components-39.pom
+[10:02:34] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/39/maven-shared-components-39.pom (3.2 kB at 64 kB/s)
+[10:02:34] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/inject/javax.inject/1/javax.inject-1.pom
+[10:02:34] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/inject/javax.inject/1/javax.inject-1.pom (612 B at 15 kB/s)
+[10:02:34] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom
+[10:02:34] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom (2.7 kB at 74 kB/s)
+[10:02:34] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom
+[10:02:34] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom (14 kB at 371 kB/s)
+[10:02:34] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.pom
+[10:02:34] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.pom (3.2 kB at 87 kB/s)
+[10:02:34] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/15/spice-parent-15.pom
+[10:02:34] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/15/spice-parent-15.pom (8.4 kB at 261 kB/s)
+[10:02:34] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/5/forge-parent-5.pom
+[10:02:35] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/5/forge-parent-5.pom (8.4 kB at 209 kB/s)
+[10:02:35] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.pom
+[10:02:35] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.pom (8.0 kB at 205 kB/s)
+[10:02:35] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.11.0/commons-io-2.11.0.pom
+[10:02:35] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.11.0/commons-io-2.11.0.pom (20 kB at 470 kB/s)
+[10:02:35] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/52/commons-parent-52.pom
+[10:02:35] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/52/commons-parent-52.pom (79 kB at 1.6 MB/s)
+[10:02:35] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.7.2/junit-bom-5.7.2.pom
+[10:02:35] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.7.2/junit-bom-5.7.2.pom (5.1 kB at 131 kB/s)
+[10:02:35] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.pom
+[10:02:35] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.pom (31 kB at 786 kB/s)
+[10:02:35] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.7.1/junit-bom-5.7.1.pom
+[10:02:35] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.7.1/junit-bom-5.7.1.pom (5.1 kB at 150 kB/s)
+[10:02:35] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.26/plexus-interpolation-1.26.jar
+[10:02:35] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.26/plexus-interpolation-1.26.jar (85 kB at 2.1 MB/s)
+[10:02:35] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.jar
+[10:02:35] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/3.3.1/maven-filtering-3.3.1.jar
+[10:02:35] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/inject/javax.inject/1/javax.inject-1.jar
+[10:02:35] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar
+[10:02:35] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.jar
+[10:02:35] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.jar (269 kB at 3.8 MB/s)
+[10:02:35] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar
+[10:02:35] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/3.3.1/maven-filtering-3.3.1.jar (55 kB at 585 kB/s)
+[10:02:35] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar
+[10:02:35] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/inject/javax.inject/1/javax.inject-1.jar (2.5 kB at 21 kB/s)
+[10:02:35] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar (327 kB at 2.8 MB/s)
+[10:02:35] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar (41 kB at 340 kB/s)
+[10:02:35] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar (587 kB at 3.9 MB/s)
+[10:02:35] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.jar (8.5 kB at 46 kB/s)
+[10:02:35]W:	 [Step 1/1] [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[10:02:35] :	 [Step 1/1] [INFO] skip non existing resourceDirectory /opt/teamcity-agent/work/5871d05f33387ade/src/main/resources
+[10:02:35] :	 [Step 1/1] [INFO] 
+[10:02:35] :	 [Step 1/1] [INFO] --- compiler:3.11.0:compile (default-compile) @ plaindoll ---
+[10:02:35] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.pom
+[10:02:35] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.pom (4.7 kB at 88 kB/s)
+[10:02:35] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/19/maven-shared-components-19.pom
+[10:02:35] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/19/maven-shared-components-19.pom (6.4 kB at 112 kB/s)
+[10:02:35] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/23/maven-parent-23.pom
+[10:02:35] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/23/maven-parent-23.pom (33 kB at 881 kB/s)
+[10:02:35] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/13/apache-13.pom
+[10:02:35] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/13/apache-13.pom (14 kB at 423 kB/s)
+[10:02:35] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.pom
+[10:02:35] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.pom (815 B at 20 kB/s)
+[10:02:35] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.5.5/plexus-containers-1.5.5.pom
+[10:02:35] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.5.5/plexus-containers-1.5.5.pom (4.2 kB at 101 kB/s)
+[10:02:35] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.7/plexus-2.0.7.pom
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.7/plexus-2.0.7.pom (17 kB at 353 kB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.1.2/plexus-java-1.1.2.pom
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.1.2/plexus-java-1.1.2.pom (5.0 kB at 97 kB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-languages/1.1.2/plexus-languages-1.1.2.pom
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-languages/1.1.2/plexus-languages-1.1.2.pom (4.1 kB at 126 kB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.4/asm-9.4.pom
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.4/asm-9.4.pom (2.4 kB at 59 kB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/ow2/1.5.1/ow2-1.5.1.pom
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/ow2/1.5.1/ow2-1.5.1.pom (11 kB at 323 kB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.pom
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.pom (17 kB at 367 kB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom (6.6 kB at 212 kB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.13.0/plexus-compiler-api-2.13.0.pom
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.13.0/plexus-compiler-api-2.13.0.pom (1.1 kB at 26 kB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.13.0/plexus-compiler-2.13.0.pom
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.13.0/plexus-compiler-2.13.0.pom (8.4 kB at 164 kB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/10.0/plexus-components-10.0.pom
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/10.0/plexus-components-10.0.pom (2.7 kB at 77 kB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.9.1/junit-bom-5.9.1.pom
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.9.1/junit-bom-5.9.1.pom (5.6 kB at 95 kB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.13.0/plexus-compiler-manager-2.13.0.pom
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.13.0/plexus-compiler-manager-2.13.0.pom (1.1 kB at 32 kB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.1.1/plexus-component-annotations-2.1.1.pom
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.1.1/plexus-component-annotations-2.1.1.pom (770 B at 23 kB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/2.1.1/plexus-containers-2.1.1.pom
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/2.1.1/plexus-containers-2.1.1.pom (6.0 kB at 195 kB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/6.5/plexus-6.5.pom
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/6.5/plexus-6.5.pom (26 kB at 402 kB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.13.0/plexus-compiler-javac-2.13.0.pom
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.13.0/plexus-compiler-javac-2.13.0.pom (1.2 kB at 36 kB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.13.0/plexus-compilers-2.13.0.pom
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.13.0/plexus-compilers-2.13.0.pom (1.3 kB at 31 kB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar (14 kB at 308 kB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.13.0/plexus-compiler-api-2.13.0.jar
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.1.2/plexus-java-1.1.2.jar
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.jar
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.4/asm-9.4.jar
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar (4.2 kB at 145 kB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.jar
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.13.0/plexus-compiler-api-2.13.0.jar (27 kB at 751 kB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.13.0/plexus-compiler-manager-2.13.0.jar
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.4/asm-9.4.jar (122 kB at 2.9 MB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.13.0/plexus-compiler-javac-2.13.0.jar
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.1.2/plexus-java-1.1.2.jar (55 kB at 1.1 MB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.jar (334 kB at 6.0 MB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.13.0/plexus-compiler-manager-2.13.0.jar (4.7 kB at 67 kB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.13.0/plexus-compiler-javac-2.13.0.jar (23 kB at 296 kB/s)
+[10:02:36] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.jar (267 kB at 2.8 MB/s)
+[10:02:37] :	 [Step 1/1] [INFO] Changes detected - recompiling the module! :source
+[10:02:37]W:	 [Step 1/1] [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[10:02:37] :	 [Step 1/1] [INFO] Compiling 2 source files with javac [debug target 1.8] to target/classes
+[10:02:38] :	 [Step 1/1] [INFO] 
+[10:02:38] :	 [Step 1/1] [INFO] --- resources:3.3.1:testResources (default-testResources) @ plaindoll ---
+[10:02:38]W:	 [Step 1/1] [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[10:02:38] :	 [Step 1/1] [INFO] skip non existing resourceDirectory /opt/teamcity-agent/work/5871d05f33387ade/src/test/resources
+[10:02:38] :	 [Step 1/1] [INFO] 
+[10:02:38] :	 [Step 1/1] [INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ plaindoll ---
+[10:02:38] :	 [Step 1/1] [INFO] Changes detected - recompiling the module! :dependency
+[10:02:38]W:	 [Step 1/1] [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[10:02:38] :	 [Step 1/1] [INFO] Compiling 1 source file with javac [debug target 1.8] to target/test-classes
+[10:02:38] :	 [Step 1/1] [INFO] 
+[10:02:38] :	 [Step 1/1] [INFO] --- surefire:3.2.2:test (default-test) @ plaindoll ---
+[10:02:38] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/3.2.2/maven-surefire-common-3.2.2.pom
+[10:02:38] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/3.2.2/maven-surefire-common-3.2.2.pom (6.1 kB at 152 kB/s)
+[10:02:38] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/3.2.2/surefire-api-3.2.2.pom
+[10:02:38] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/3.2.2/surefire-api-3.2.2.pom (3.4 kB at 67 kB/s)
+[10:02:38] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-logger-api/3.2.2/surefire-logger-api-3.2.2.pom
+[10:02:38] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-logger-api/3.2.2/surefire-logger-api-3.2.2.pom (3.2 kB at 45 kB/s)
+[10:02:38] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-shared-utils/3.2.2/surefire-shared-utils-3.2.2.pom
+[10:02:38] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-shared-utils/3.2.2/surefire-shared-utils-3.2.2.pom (4.1 kB at 68 kB/s)
+[10:02:38] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-api/3.2.2/surefire-extensions-api-3.2.2.pom
+[10:02:38] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-api/3.2.2/surefire-extensions-api-3.2.2.pom (3.2 kB at 42 kB/s)
+[10:02:38] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/3.2.2/surefire-booter-3.2.2.pom
+[10:02:38] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/3.2.2/surefire-booter-3.2.2.pom (4.3 kB at 90 kB/s)
+[10:02:38] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-spi/3.2.2/surefire-extensions-spi-3.2.2.pom
+[10:02:38] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-spi/3.2.2/surefire-extensions-spi-3.2.2.pom (1.7 kB at 45 kB/s)
+[10:02:38] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/1.0.0.v20140518/aether-util-1.0.0.v20140518.pom
+[10:02:39] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/1.0.0.v20140518/aether-util-1.0.0.v20140518.pom (2.2 kB at 54 kB/s)
+[10:02:39] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether/1.0.0.v20140518/aether-1.0.0.v20140518.pom
+[10:02:39] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether/1.0.0.v20140518/aether-1.0.0.v20140518.pom (30 kB at 735 kB/s)
+[10:02:39] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-api/1.0.0.v20140518/aether-api-1.0.0.v20140518.pom
+[10:02:39] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-api/1.0.0.v20140518/aether-api-1.0.0.v20140518.pom (1.9 kB at 42 kB/s)
+[10:02:39] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.1.1/maven-common-artifact-filters-3.1.1.pom
+[10:02:39] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.1.1/maven-common-artifact-filters-3.1.1.pom (5.8 kB at 114 kB/s)
+[10:02:39] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.2.5/maven-artifact-3.2.5.pom
+[10:02:39] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.2.5/maven-artifact-3.2.5.pom (2.3 kB at 37 kB/s)
+[10:02:39] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/3.2.5/maven-3.2.5.pom
+[10:02:39] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/3.2.5/maven-3.2.5.pom (22 kB at 392 kB/s)
+[10:02:39] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/25/maven-parent-25.pom
+[10:02:39] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/25/maven-parent-25.pom (37 kB at 480 kB/s)
+[10:02:39] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/15/apache-15.pom
+[10:02:39] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/15/apache-15.pom (15 kB at 175 kB/s)
+[10:02:39] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/4.0.0/plexus-utils-4.0.0.pom
+[10:02:39] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/4.0.0/plexus-utils-4.0.0.pom (8.7 kB at 247 kB/s)
+[10:02:39] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/13/plexus-13.pom
+[10:02:39] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/13/plexus-13.pom (27 kB at 637 kB/s)
+[10:02:39] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/3.2.5/maven-core-3.2.5.pom
+[10:02:39] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/3.2.5/maven-core-3.2.5.pom (8.1 kB at 192 kB/s)
+[10:02:39] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/3.2.5/maven-settings-3.2.5.pom
+[10:02:39] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/3.2.5/maven-settings-3.2.5.pom (2.2 kB at 68 kB/s)
+[10:02:39] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings-builder/3.2.5/maven-settings-builder-3.2.5.pom
+[10:02:39] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings-builder/3.2.5/maven-settings-builder-3.2.5.pom (2.6 kB at 87 kB/s)
+[10:02:39] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.21/plexus-interpolation-1.21.pom
+[10:02:39] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.21/plexus-interpolation-1.21.pom (1.5 kB at 36 kB/s)
+[10:02:39] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.3.1/plexus-components-1.3.1.pom
+[10:02:39] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.3.1/plexus-components-1.3.1.pom (3.1 kB at 79 kB/s)
+[10:02:39] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/3.3.1/plexus-3.3.1.pom
+[10:02:39] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/3.3.1/plexus-3.3.1.pom (20 kB at 379 kB/s)
+[10:02:39] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/17/spice-parent-17.pom
+[10:02:39] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/17/spice-parent-17.pom (6.8 kB at 154 kB/s)
+[10:02:39] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/10/forge-parent-10.pom
+[10:02:39] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/10/forge-parent-10.pom (14 kB at 301 kB/s)
+[10:02:39] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.pom
+[10:02:39] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.pom (3.0 kB at 70 kB/s)
+[10:02:39] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/12/spice-parent-12.pom
+[10:02:40] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/12/spice-parent-12.pom (6.8 kB at 97 kB/s)
+[10:02:40] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/4/forge-parent-4.pom
+[10:02:40] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/4/forge-parent-4.pom (8.4 kB at 165 kB/s)
+[10:02:40] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.pom
+[10:02:40] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.pom (2.1 kB at 54 kB/s)
+[10:02:40] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/3.2.5/maven-repository-metadata-3.2.5.pom
+[10:02:40] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/3.2.5/maven-repository-metadata-3.2.5.pom (2.2 kB at 30 kB/s)
+[10:02:40] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.2.5/maven-plugin-api-3.2.5.pom
+[10:02:40] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.2.5/maven-plugin-api-3.2.5.pom (3.0 kB at 53 kB/s)
+[10:02:40] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.plexus/0.9.0.M2/org.eclipse.sisu.plexus-0.9.0.M2.pom
+[10:02:40] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.plexus/0.9.0.M2/org.eclipse.sisu.plexus-0.9.0.M2.pom (15 kB at 428 kB/s)
+[10:02:40] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/sisu-plexus/0.9.0.M2/sisu-plexus-0.9.0.M2.pom
+[10:02:40] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/sisu-plexus/0.9.0.M2/sisu-plexus-0.9.0.M2.pom (15 kB at 414 kB/s)
+[10:02:40] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.pom
+[10:02:40] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.pom (13 kB at 220 kB/s)
+[10:02:40] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/java/jvnet-parent/3/jvnet-parent-3.pom
+[10:02:40] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/java/jvnet-parent/3/jvnet-parent-3.pom (4.8 kB at 83 kB/s)
+[10:02:40] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/enterprise/cdi-api/1.2/cdi-api-1.2.pom
+[10:02:40] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/enterprise/cdi-api/1.2/cdi-api-1.2.pom (6.3 kB at 79 kB/s)
+[10:02:40] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/weld/weld-parent/26/weld-parent-26.pom
+[10:02:40] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/weld/weld-parent/26/weld-parent-26.pom (32 kB at 770 kB/s)
+[10:02:40] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/0.9.0.M2/org.eclipse.sisu.inject-0.9.0.M2.pom
+[10:02:40] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/0.9.0.M2/org.eclipse.sisu.inject-0.9.0.M2.pom (17 kB at 255 kB/s)
+[10:02:40] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/sisu-inject/0.9.0.M2/sisu-inject-0.9.0.M2.pom
+[10:02:40] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/sisu-inject/0.9.0.M2/sisu-inject-0.9.0.M2.pom (15 kB at 211 kB/s)
+[10:02:40] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.1.0/plexus-component-annotations-2.1.0.pom
+[10:02:40] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.1.0/plexus-component-annotations-2.1.0.pom (750 B at 21 kB/s)
+[10:02:40] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/2.1.0/plexus-containers-2.1.0.pom
+[10:02:40] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/2.1.0/plexus-containers-2.1.0.pom (4.8 kB at 83 kB/s)
+[10:02:40] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.6.0/plexus-classworlds-2.6.0.pom
+[10:02:40] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.6.0/plexus-classworlds-2.6.0.pom (7.9 kB at 198 kB/s)
+[10:02:40] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model-builder/3.2.5/maven-model-builder-3.2.5.pom
+[10:02:40] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model-builder/3.2.5/maven-model-builder-3.2.5.pom (3.0 kB at 53 kB/s)
+[10:02:40] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-aether-provider/3.2.5/maven-aether-provider-3.2.5.pom
+[10:02:41] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-aether-provider/3.2.5/maven-aether-provider-3.2.5.pom (4.2 kB at 60 kB/s)
+[10:02:41] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-spi/1.0.0.v20140518/aether-spi-1.0.0.v20140518.pom
+[10:02:41] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-spi/1.0.0.v20140518/aether-spi-1.0.0.v20140518.pom (2.1 kB at 46 kB/s)
+[10:02:41] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-impl/1.0.0.v20140518/aether-impl-1.0.0.v20140518.pom
+[10:02:41] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-impl/1.0.0.v20140518/aether-impl-1.0.0.v20140518.pom (3.5 kB at 83 kB/s)
+[10:02:41] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-guice/3.2.3/sisu-guice-3.2.3.pom
+[10:02:41] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-guice/3.2.3/sisu-guice-3.2.3.pom (11 kB at 195 kB/s)
+[10:02:41] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/inject/guice-parent/3.2.3/guice-parent-3.2.3.pom
+[10:02:41] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/inject/guice-parent/3.2.3/guice-parent-3.2.3.pom (13 kB at 449 kB/s)
+[10:02:41] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/38/forge-parent-38.pom
+[10:02:41] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/38/forge-parent-38.pom (19 kB at 335 kB/s)
+[10:02:41] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/aopalliance/aopalliance/1.0/aopalliance-1.0.pom
+[10:02:41] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/aopalliance/aopalliance/1.0/aopalliance-1.0.pom (363 B at 12 kB/s)
+[10:02:41] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/16.0.1/guava-16.0.1.pom
+[10:02:41] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/16.0.1/guava-16.0.1.pom (6.1 kB at 149 kB/s)
+[10:02:41] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/16.0.1/guava-parent-16.0.1.pom
+[10:02:41] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/16.0.1/guava-parent-16.0.1.pom (7.3 kB at 113 kB/s)
+[10:02:41] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom
+[10:02:41] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom (4.8 kB at 107 kB/s)
+[10:02:41] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.5.2/plexus-classworlds-2.5.2.pom
+[10:02:41] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.5.2/plexus-classworlds-2.5.2.pom (7.3 kB at 228 kB/s)
+[10:02:41] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.12.0/commons-io-2.12.0.pom
+[10:02:41] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.12.0/commons-io-2.12.0.pom (20 kB at 496 kB/s)
+[10:02:41] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/57/commons-parent-57.pom
+[10:02:41] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/57/commons-parent-57.pom (83 kB at 1.1 MB/s)
+[10:02:41] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.9.2/junit-bom-5.9.2.pom
+[10:02:41] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.9.2/junit-bom-5.9.2.pom (5.6 kB at 82 kB/s)
+[10:02:41] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.2.0/plexus-java-1.2.0.pom
+[10:02:41] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.2.0/plexus-java-1.2.0.pom (4.3 kB at 56 kB/s)
+[10:02:41] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-languages/1.2.0/plexus-languages-1.2.0.pom
+[10:02:41] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-languages/1.2.0/plexus-languages-1.2.0.pom (3.2 kB at 97 kB/s)
+[10:02:41] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/15/plexus-15.pom
+[10:02:41] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/15/plexus-15.pom (28 kB at 448 kB/s)
+[10:02:41] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.0/junit-bom-5.10.0.pom
+[10:02:41] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.0/junit-bom-5.10.0.pom (5.6 kB at 166 kB/s)
+[10:02:41] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.6/asm-9.6.pom
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.6/asm-9.6.pom (2.4 kB at 79 kB/s)
+[10:02:42] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/3.2.2/maven-surefire-common-3.2.2.jar
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/3.2.2/maven-surefire-common-3.2.2.jar (309 kB at 4.3 MB/s)
+[10:02:42] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/3.2.2/surefire-api-3.2.2.jar
+[10:02:42] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-logger-api/3.2.2/surefire-logger-api-3.2.2.jar
+[10:02:42] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-api/3.2.2/surefire-extensions-api-3.2.2.jar
+[10:02:42] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/3.2.2/surefire-booter-3.2.2.jar
+[10:02:42] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-spi/3.2.2/surefire-extensions-spi-3.2.2.jar
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-api/3.2.2/surefire-extensions-api-3.2.2.jar (26 kB at 731 kB/s)
+[10:02:42] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/1.0.0.v20140518/aether-util-1.0.0.v20140518.jar
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-logger-api/3.2.2/surefire-logger-api-3.2.2.jar (14 kB at 308 kB/s)
+[10:02:42] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-api/1.0.0.v20140518/aether-api-1.0.0.v20140518.jar
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-spi/3.2.2/surefire-extensions-spi-3.2.2.jar (8.2 kB at 199 kB/s)
+[10:02:42] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.1.1/maven-common-artifact-filters-3.1.1.jar
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/3.2.2/surefire-booter-3.2.2.jar (118 kB at 2.5 MB/s)
+[10:02:42] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.12.0/commons-io-2.12.0.jar
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/3.2.2/surefire-api-3.2.2.jar (171 kB at 3.1 MB/s)
+[10:02:42] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.2.0/plexus-java-1.2.0.jar
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/1.0.0.v20140518/aether-util-1.0.0.v20140518.jar (146 kB at 2.2 MB/s)
+[10:02:42] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.6/asm-9.6.jar
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-api/1.0.0.v20140518/aether-api-1.0.0.v20140518.jar (136 kB at 1.6 MB/s)
+[10:02:42] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-shared-utils/3.2.2/surefire-shared-utils-3.2.2.jar
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.1.1/maven-common-artifact-filters-3.1.1.jar (61 kB at 716 kB/s)
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.2.0/plexus-java-1.2.0.jar (58 kB at 661 kB/s)
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.12.0/commons-io-2.12.0.jar (474 kB at 5.0 MB/s)
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.6/asm-9.6.jar (124 kB at 1.2 MB/s)
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-shared-utils/3.2.2/surefire-shared-utils-3.2.2.jar (2.3 MB at 14 MB/s)
+[10:02:42] :	 [Step 1/1] [INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+[10:02:42] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/3.2.2/surefire-junit4-3.2.2.pom
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/3.2.2/surefire-junit4-3.2.2.pom (3.0 kB at 16 kB/s)
+[10:02:42] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.2.2/surefire-providers-3.2.2.pom
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.2.2/surefire-providers-3.2.2.pom (2.5 kB at 88 kB/s)
+[10:02:42] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/3.2.2/common-junit4-3.2.2.pom
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/3.2.2/common-junit4-3.2.2.pom (3.0 kB at 84 kB/s)
+[10:02:42] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/3.2.2/common-junit3-3.2.2.pom
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/3.2.2/common-junit3-3.2.2.pom (2.7 kB at 77 kB/s)
+[10:02:42] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.2.2/common-java5-3.2.2.pom
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.2.2/common-java5-3.2.2.pom (2.7 kB at 72 kB/s)
+[10:02:42] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/3.2.2/surefire-junit4-3.2.2.jar
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/3.2.2/surefire-junit4-3.2.2.jar (18 kB at 245 kB/s)
+[10:02:42] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/3.2.2/common-junit4-3.2.2.jar
+[10:02:42] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/3.2.2/common-junit3-3.2.2.jar
+[10:02:42] :	 [Step 1/1] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.2.2/common-java5-3.2.2.jar
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/3.2.2/common-junit3-3.2.2.jar (12 kB at 385 kB/s)
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/3.2.2/common-junit4-3.2.2.jar (26 kB at 683 kB/s)
+[10:02:42] :	 [Step 1/1] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.2.2/common-java5-3.2.2.jar (18 kB at 450 kB/s)
+[10:02:42] :	 [Step 1/1] [INFO] 
+[10:02:42] :	 [Step 1/1] [INFO] -------------------------------------------------------
+[10:02:42] :	 [Step 1/1] [INFO]  T E S T S
+[10:02:42] :	 [Step 1/1] [INFO] -------------------------------------------------------
+[10:02:43] :	 [Step 1/1] [INFO] Running plaindoll.WelcomerTest
+[10:02:43] :	 [Step 1/1] [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 s -- in plaindoll.WelcomerTest
+[10:02:43] :	 [Step 1/1] [INFO] 
+[10:02:43] :	 [Step 1/1] [INFO] Results:
+[10:02:43] :	 [Step 1/1] [INFO] 
+[10:02:43] :	 [Step 1/1] [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+[10:02:43] :	 [Step 1/1] [INFO] 
+[10:02:43] :	 [Step 1/1] [Maven Watcher] 
+[10:02:43]i:	 [Step 1/1] ##teamcity[projectFinished tc:tags='tc:internal' projectId='org.netology:plaindoll:jar:0.0.2']
+[10:02:43] :	 [Step 1/1] [INFO] ------------------------------------------------------------------------
+[10:02:43] :	 [Step 1/1] [INFO] BUILD SUCCESS
+[10:02:43] :	 [Step 1/1] [INFO] ------------------------------------------------------------------------
+[10:02:43] :	 [Step 1/1] [INFO] Total time:  11.166 s
+[10:02:43] :	 [Step 1/1] [INFO] Finished at: 2026-03-16T10:02:43Z
+[10:02:43] :	 [Step 1/1] [INFO] ------------------------------------------------------------------------
+[10:02:43] :	 [Step 1/1] [Maven Watcher] building report document...
+[10:02:43] :	 [Step 1/1] [Maven Watcher] building report document done
+[10:02:43] :	 [Step 1/1] [Maven Watcher] writing report to /opt/teamcity-agent/temp/buildTmp/maven-build-info.xml
+[10:02:43] :	 [Step 1/1] [Maven Watcher] done writing report
+[10:02:43] :	 [Step 1/1] Process exited with code 0
+[10:02:43] :	 [Step 1/1] Publishing artifacts
+[10:02:43] :		 [Publishing artifacts] Collecting files to publish: [/opt/teamcity-agent/temp/buildTmp/.tc-maven-bi/maven-build-info.xml.gz => .teamcity]
+[10:02:43] :		 [Publishing artifacts] Publishing 1 file using [WebPublisher]: /opt/teamcity-agent/temp/buildTmp/.tc-maven-bi/maven-build-info.xml.gz => .teamcity
+[10:02:43] :		 [Publishing artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]: /opt/teamcity-agent/temp/buildTmp/.tc-maven-bi/maven-build-info.xml.gz => .teamcity
+[10:02:43]i:		 [Publishing artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[10:02:43]i:	 [Step 1/1] plaindoll.WelcomerTest
+[10:02:43]i:		 [plaindoll.WelcomerTest] welcomerSaysFarewell
+[10:02:43]i:		 [plaindoll.WelcomerTest] welcomerSaysHunter
+[10:02:43]i:		 [plaindoll.WelcomerTest] welcomerSaysSilver
+[10:02:43]i:		 [plaindoll.WelcomerTest] welcomerSaysSomething
+[10:02:43]i:		 [plaindoll.WelcomerTest] welcomerSaysWelcome
+[10:02:43] :	 [Step 1/1] Waiting for 2 service processes to complete
+[10:02:43] :	 [Step 1/1] Surefire report watcher
+[10:02:43] :		 [Surefire report watcher] 1 report found for paths:
+[10:02:43] :		 [Surefire report watcher] /opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports/TEST-*.xml
+[10:02:43] :		 [Surefire report watcher] Successfully parsed
+[10:02:43] :			 [Successfully parsed] 1 report
+[10:02:43] :			 [Successfully parsed] target/surefire-reports/TEST-plaindoll.WelcomerTest.xml
+[10:02:43]i: Stopping performance monitoring process
+[10:02:49]i: Performance monitoring process stopped
+[10:02:49]i: Publishing performance monitoring build stages data
+[10:02:49] : Publishing artifacts
+[10:02:49] :	 [Publishing artifacts] Collecting files to publish: [/opt/teamcity-agent/system/perfmon/temp/101/perfmon.csv=>.teamcity/perfmon/, /opt/teamcity-agent/temp/agentTmp/build_stages.txt=>.teamcity/perfmon/]
+[10:02:50] :	 [Publishing artifacts] Publishing 2 files using [WebPublisher]: /opt/teamcity-agent/system/perfmon/temp/101/perfmon.csv, /opt/teamcity-agent/temp/agentTmp/build_stages.txt => .teamcity/perfmon
+[10:02:50] :	 [Publishing artifacts] Publishing 2 files using [ArtifactsCachePublisherImpl]: /opt/teamcity-agent/system/perfmon/temp/101/perfmon.csv, /opt/teamcity-agent/temp/agentTmp/build_stages.txt => .teamcity/perfmon
+[10:02:50]i:	 [Publishing artifacts] Will publish 2 artifact(s) to TeamCity node with id MAIN_SERVER
+[10:02:49] : Publishing internal artifacts
+[10:02:50] :	 [Publishing internal artifacts] Publishing 1 file using [WebPublisher]
+[10:02:50] :	 [Publishing internal artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]
+[10:02:50]i:	 [Publishing internal artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[10:02:50] : Publishing internal artifacts
+[10:02:50] : Build finished

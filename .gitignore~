@@ -1,5 +1,3 @@
 files/*.pub
 roles/*
 pass.txt
-teamcity/settings.xml
-

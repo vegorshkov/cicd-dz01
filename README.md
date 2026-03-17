@@ -89,5 +89,84 @@ vim buildAgent.properties
 
 ![alt text](image-30.png)
 
-Тест прошел.
+Тесты прошли SUCESS.
+![alt text](image-32.png)
+![alt text](image-33.png)
+Логи выгружены сюда:  [text](netology_example-teamcity-build_2.log)
+
+Проект создан:
+![alt text](image-31.png)
+
+Задача 4:
+"Поменяйте условия сборки: если сборка по ветке master, то должен происходит mvn clean deploy, иначе mvn clean test."
+
+Переходим в настройки Build конфигурации:
+![alt text](image-34.png)
+
+Смотрю Buils Steps
+![alt text](image-35.png)
+
+Переходим к редактированию первого шага:
+![alt text](image-36.png)
+![alt text](image-37.png)
+![alt text](image-38.png)
+
+Добавляем условие:
+![alt text](image-39.png)   teamcity.build.branch
+
+![alt text](image-40.png)
+
+Теперь этот шаг будет выполняться не для master
+
+Сделаем шаг для Master'a
+![alt text](image-41.png)
+
+Выберем тип шага Maven
+![alt text](image-42.png)
+
+Создан шаг:
+![alt text](image-43.png)
+
+Найдены параметры Execution step:
+![alt text](image-44.png)
+
+Установки обновлены:
+![alt text](image-45.png)
+
+Указываем предустановки проекта:
+![alt text](image-46.png)
+
+Прописываем параметры execution step 2
+![alt text](image-47.png)
+
+Готов запускать deploy 
+![alt text](image-48.png)
+
+![alt text](image-49.png)
+
+Логи:
+![alt text](image-50.png)
+
+Видно что step1 выполнился, второй нет. По параметрам сборки, заметил что параметр condition не существует. Укажу вместо teamcity.build.branch используем vcsroot.branch
+ ![alt text](image-51.png)
+
+Перезапуск:
+![alt text](image-52.png)
+
+Не указан правильно nexus. Fixit.
+![alt text](image-53.png)
+[text](netology_example-teamcity-build_5.log)
+
+Не указан правильно пароль после смены. Fixit.
+![alt text](image-54.png)
+[text](netology_example-teamcity-build_6.log)
+
+Сборка собралась без ошибок:
+![alt text](image-55.png)
+SUCCESS
+[text](netology_example-teamcity-build_7.log)
+
+Шаг 7:
+Артефакт добыт =)
+![alt text](image-56.png)
 

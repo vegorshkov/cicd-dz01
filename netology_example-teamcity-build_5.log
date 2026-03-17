@@ -1,0 +1,641 @@
+Build 'netology / example-teamcity-build' #5
+Triggered 2026-03-17 00:34:31 by 'admin'
+Started 2026-03-17 00:34:36 on agent 'teamcity-agent'
+Finished 2026-03-17 00:35:17 with status FAILURE 'Tests passed: 5; exit code 1 (Step: Maven Deploy for master (Maven)) (new)'
+VCS revisions: 'Netology_HttpsGithubComVegorshkovExampleTeamcity' (Git, instance id 1): '4021122cb6e240aed22836bdae96954fd0c4b9f4' (branch: 'refs/heads/master')
+TeamCity URL http://62.84.118.135:8111/buildConfiguration/Netology_ExampleTeamcityBuild/106 
+TeamCity server version is 2025.11.3 (build 208117), server timezone: GMT (UTC)
+Log entries are grouped by flowIds, so they might not be fully ordered by timestamps
+
+[00:34:31]E: bt1 (46s)
+[00:34:31]i: TeamCity server version is 2025.11.3 (build 208117)
+[00:34:31] : Finalize build settings
+[00:34:36] : The build is removed from the queue to be prepared for the start
+[00:34:36] : Collecting changes in 1 VCS root
+[00:34:36] :	 [Collecting changes in 1 VCS root] VCS Root details
+[00:34:36] :		 [VCS Root details] "https://github.com/vegorshkov/example-teamcity" {instance id=1, parent internal id=1, parent id=Netology_HttpsGithubComVegorshkovExampleTeamcity, description: "https://github.com/vegorshkov/example-teamcity#refs/heads/master"}
+[00:34:36]i:	 [Collecting changes in 1 VCS root] Loading current repository state for VCS root 'https://github.com/vegorshkov/example-teamcity'
+[00:34:36]i:		 [Loading current repository state for VCS root 'https://github.com/vegorshkov/example-teamcity'] VCS root 'https://github.com/vegorshkov/example-teamcity': git -c credential.helper= -c credential.helper=/opt/teamcity/temp/credHelper7825780086252430588.sh ls-remote origin
+[00:34:36]i:	 [Collecting changes in 1 VCS root] Detecting changes in VCS root 'https://github.com/vegorshkov/example-teamcity' (used in 'example-teamcity-build')
+[00:34:36]i:	 [Collecting changes in 1 VCS root] Will collect changes for 'https://github.com/vegorshkov/example-teamcity' starting from revision 4021122cb6e240aed22836bdae96954fd0c4b9f4
+[00:34:36] : Compute revision for 'https://github.com/vegorshkov/example-teamcity'
+[00:34:36] :	 [Compute revision for 'https://github.com/vegorshkov/example-teamcity'] Upper limit revision: 4021122cb6e240aed22836bdae96954fd0c4b9f4
+[00:34:36]i:	 [Compute revision for 'https://github.com/vegorshkov/example-teamcity'] MaxModId = null
+[00:34:36] :	 [Compute revision for 'https://github.com/vegorshkov/example-teamcity'] Cannot find modification in TeamCity database with revision 4021122cb6e240aed22836bdae96954fd0c4b9f4
+[00:34:36] :	 [Compute revision for 'https://github.com/vegorshkov/example-teamcity'] Computed revision: 4021122cb6e240aed22836bdae96954fd0c4b9f4
+[00:34:36] : Starting the build on the agent "teamcity-agent"
+[00:34:36]i: Agent time zone: Etc/UTC
+[00:34:36]i: Agent is running under JRE: 1.8.0_482-8u482-ga~us1-0ubuntu1~22.04-b08
+[00:34:36] : Updating tools for build
+[00:34:36] :	 [Updating tools for build] Found 1 tool used by the build: maven3_9
+[00:34:36] :	 [Updating tools for build] All used tools are up-to-date
+[00:34:36] : Clearing temporary directory: /opt/teamcity-agent/temp/buildTmp
+[00:34:36]i: Preparing performance monitoring data directory: /opt/teamcity-agent/system/perfmon
+[00:34:36]i: Performance monitor is using command line: [perl, /opt/teamcity-agent/system/perfmon/scripts/vmstatlinux.pl, /opt/teamcity-agent/system/perfmon/temp/106/perfmon.csv, 1000]
+[00:34:36]i: Starting performance monitoring process
+[00:34:36]i: Performance monitoring process started
+[00:34:36] : Publishing internal artifacts
+[00:34:36] :	 [Publishing internal artifacts] Publishing 1 file using [WebPublisher]
+[00:34:36] :	 [Publishing internal artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]
+[00:34:36]i:	 [Publishing internal artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[00:34:37] : Using vcs information from agent file: 5871d05f33387ade.xml
+[00:34:37] : Checkout directory: /opt/teamcity-agent/work/5871d05f33387ade
+[00:34:37] : Updating sources: auto checkout (on agent)
+[00:34:37] :	 [Updating sources] Will use agent side checkout
+[00:34:37] :	 [Updating sources] VCS Root: https://github.com/vegorshkov/example-teamcity
+[00:34:37] :		 [VCS Root: https://github.com/vegorshkov/example-teamcity] revision: 4021122cb6e240aed22836bdae96954fd0c4b9f4
+[00:34:37]i:		 [VCS Root: https://github.com/vegorshkov/example-teamcity] Mirrors automatically enabled
+[00:34:37] :		 [VCS Root: https://github.com/vegorshkov/example-teamcity] Git version: 2.34.1.0
+[00:34:37] :		 [VCS Root: https://github.com/vegorshkov/example-teamcity] Update git mirror (/opt/teamcity-agent/system/git/git-A1E3EC2E.git)
+[00:34:37] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-A1E3EC2E.git)] /usr/bin/git config http.sslCAInfo
+[00:34:37] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-A1E3EC2E.git)] /usr/bin/git show-ref
+[00:34:37] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-A1E3EC2E.git)] /usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper3592988606046041243.sh ls-remote origin
+[00:34:37] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-A1E3EC2E.git)] /usr/bin/git show-ref refs/heads/master
+[00:34:37] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-A1E3EC2E.git)] /usr/bin/git log -n1 --pretty=format:%H%x20%s 4021122cb6e240aed22836bdae96954fd0c4b9f4 --
+[00:34:37] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-A1E3EC2E.git)] No 'git fetch' required: commit '4021122cb6e240aed22836bdae96954fd0c4b9f4' is in the local repository clone pointed by 'refs/heads/master'.
+[00:34:37] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-A1E3EC2E.git)] /usr/bin/git pack-refs --all
+[00:34:37] :		 [VCS Root: https://github.com/vegorshkov/example-teamcity] Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)
+[00:34:37] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git rev-parse --is-shallow-repository
+[00:34:37] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git config lfs.storage /opt/teamcity-agent/system/git/git-A1E3EC2E.git/lfs
+[00:34:37] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git config core.sparseCheckout true
+[00:34:37] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git config http.sslCAInfo
+[00:34:37] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git show-ref
+[00:34:37] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git show-ref refs/remotes/origin/master
+[00:34:37] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git log -n1 --pretty=format:%H%x20%s 4021122cb6e240aed22836bdae96954fd0c4b9f4 --
+[00:34:37] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] No 'git fetch' required: commit '4021122cb6e240aed22836bdae96954fd0c4b9f4' is in the local repository clone pointed by 'refs/remotes/origin/master'.
+[00:34:37] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git branch
+[00:34:37] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper1014385781827967647.sh reset --hard 4021122cb6e240aed22836bdae96954fd0c4b9f4
+[00:34:37] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git branch --set-upstream-to=refs/remotes/origin/master
+[00:34:37] : Build preparation done
+[00:34:37]W: Step 1/2: Maven Test (не-master ветки) (Maven) (5s)
+[00:34:37]i:	 [Step 1/2] Build step condition "vcsroot.branch does not equal master" is satisfied
+[00:34:37] :	 [Step 1/2] Initial M2_HOME not set
+[00:34:37] :	 [Step 1/2] Current M2_HOME = /opt/teamcity-agent/tools/maven3_9
+[00:34:37] :	 [Step 1/2] PATH = /opt/teamcity-agent/tools/maven3_9/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+[00:34:37] :	 [Step 1/2] Using watcher: /opt/teamcity-agent/plugins/mavenPlugin/maven-watcher-jdk17/maven-watcher-agent.jar
+[00:34:37] :	 [Step 1/2] Using agent local repository at /opt/teamcity-agent/system/jetbrains.maven.runner/maven.repo.local
+[00:34:37] :	 [Step 1/2] *** Start reading the project structure ***
+[00:34:37]i:	 [Step 1/2] Initial MAVEN_OPTS not set
+[00:34:37]i:	 [Step 1/2] Current MAVEN_OPTS not set
+[00:34:39]i:	 [Step 1/2] [INFO] Scanning for projects...
+[00:34:39]i:	 [Step 1/2] [INFO] 
+[00:34:39]i:	 [Step 1/2] [INFO] -----------------------< org.netology:plaindoll >-----------------------
+[00:34:39]i:	 [Step 1/2] [INFO] Building plaindoll 0.0.2
+[00:34:39]i:	 [Step 1/2] [INFO]   from info.844015549574816653.pom.xml
+[00:34:39]i:	 [Step 1/2] [INFO] --------------------------------[ jar ]---------------------------------
+[00:34:39]i:	 [Step 1/2] [INFO] 
+[00:34:39]i:	 [Step 1/2] [INFO] --- info3:1.4.8:info (default-cli) @ plaindoll ---
+[00:34:39]i:	 [Step 1/2] [INFO] ------------------------------------------------------------------------
+[00:34:39]i:	 [Step 1/2] [INFO] BUILD SUCCESS
+[00:34:39]i:	 [Step 1/2] [INFO] ------------------------------------------------------------------------
+[00:34:39]i:	 [Step 1/2] [INFO] Total time:  0.328 s
+[00:34:39]i:	 [Step 1/2] [INFO] Finished at: 2026-03-17T00:34:39Z
+[00:34:39]i:	 [Step 1/2] [INFO] ------------------------------------------------------------------------
+[00:34:39]i:	 [Step 1/2] Process exited with code 0
+[00:34:39] :	 [Step 1/2] Initial MAVEN_OPTS not set
+[00:34:39] :	 [Step 1/2] Current MAVEN_OPTS not set
+[00:34:39] :	 [Step 1/2] Starting: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -Dagent.home.dir=/opt/teamcity-agent -Dagent.name=teamcity-agent -Dagent.ownPort=9091 -Dagent.work.dir=/opt/teamcity-agent/work -Dbuild.number=5 -Dbuild.vcs.number=4021122cb6e240aed22836bdae96954fd0c4b9f4 -Dbuild.vcs.number.1=4021122cb6e240aed22836bdae96954fd0c4b9f4 -Dbuild.vcs.number.Netology_HttpsGithubComVegorshkovExampleTeamcity=4021122cb6e240aed22836bdae96954fd0c4b9f4 -Dclassworlds.conf=/opt/teamcity-agent/temp/buildTmp/teamcity.m2.conf -Dcom.jetbrains.maven.watcher.report.file=/opt/teamcity-agent/temp/buildTmp/maven-build-info.xml -Djava.io.tmpdir=/opt/teamcity-agent/temp/buildTmp -Dmaven.home=/opt/teamcity-agent/tools/maven3_9 -Dmaven.multiModuleProjectDirectory=/opt/teamcity-agent/work/5871d05f33387ade -Dteamcity.agent.cpuBenchmark=411 -Dteamcity.auth.password=******* -Dteamcity.auth.userId=TeamCityBuildId=106 -Dteamcity.build.changedFiles.file=/opt/teamcity-agent/temp/buildTmp/teamcity.changedFiles.txt -Dteamcity.build.checkoutDir=/opt/teamcity-agent/work/5871d05f33387ade -Dteamcity.build.id=106 -Dteamcity.build.properties.file=/opt/teamcity-agent/temp/buildTmp/teamcity.build.parameters -Dteamcity.build.properties.file.checksum=/opt/teamcity-agent/temp/buildTmp/teamcity.build.parameters.checksum -Dteamcity.build.tempDir=/opt/teamcity-agent/temp/buildTmp -Dteamcity.build.workingDir=/opt/teamcity-agent/work/5871d05f33387ade -Dteamcity.buildConfName=example-teamcity-build -Dteamcity.buildType.id=Netology_ExampleTeamcityBuild -Dteamcity.configuration.properties.file=/opt/teamcity-agent/temp/buildTmp/teamcity.config.parameters -Dteamcity.maven.watcher.home=/opt/teamcity-agent/plugins/mavenPlugin/maven-watcher-jdk17 -Dteamcity.projectName=netology -Dteamcity.runner.properties.file=/opt/teamcity-agent/temp/buildTmp/teamcity.runner.parameters -Dteamcity.tests.recentlyFailedTests.file=/opt/teamcity-agent/temp/buildTmp/teamcity.testsToRunFirst.txt -Dteamcity.version=2025.11.3 (build 208117) -Dmaven.repo.local=/opt/teamcity-agent/system/jetbrains.maven.runner/maven.repo.local -classpath /opt/teamcity-agent/tools/maven3_9/boot/plexus-classworlds-2.7.0.jar: org.codehaus.plexus.classworlds.launcher.Launcher -f /opt/teamcity-agent/work/5871d05f33387ade/pom.xml -B -Dmaven.test.failure.ignore=true clean test
+[00:34:39] :	 [Step 1/2] in directory: /opt/teamcity-agent/work/5871d05f33387ade
+[00:34:40] :	 [Step 1/2] [INFO] Scanning for projects...
+[00:34:40] :	 [Step 1/2] [INFO] 
+[00:34:40] :	 [Step 1/2] [INFO] -----------------------< org.netology:plaindoll >-----------------------
+[00:34:40] :	 [Step 1/2] [INFO] Building plaindoll 0.0.2
+[00:34:40] :	 [Step 1/2] [INFO]   from pom.xml
+[00:34:40] :	 [Step 1/2] [INFO] --------------------------------[ jar ]---------------------------------
+[00:34:40] :	 [Step 1/2] [Maven Watcher] project started: org.netology:plaindoll:jar:0.0.2
+[00:34:40] :	 [Step 1/2] org.netology:plaindoll (1s)
+[00:34:40]i:		 [org.netology:plaindoll] ##teamcity[importData tc:tags='tc:internal' type='surefire' path='/opt/teamcity-agent/work/5871d05f33387ade/target/failsafe-reports/TEST-*.xml' whenNoDataPublished='nothing' logAsInternal='true' rerunFailingTestsEnabled='false']
+[00:34:40]i:		 [org.netology:plaindoll] ##teamcity[importData tc:tags='tc:internal' type='surefire' path='/opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports/TEST-*.xml' whenNoDataPublished='nothing' logAsInternal='true' rerunFailingTestsEnabled='false']
+[00:34:40] :	 [Step 1/2] Importing data from '/opt/teamcity-agent/work/5871d05f33387ade/target/failsafe-reports/TEST-*.xml' with 'surefire' processor
+[00:34:40] :	 [Step 1/2] Importing data from '/opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports/TEST-*.xml' with 'surefire' processor
+[00:34:41] :	 [Step 1/2] Surefire report watcher
+[00:34:41] :		 [Surefire report watcher] Watching paths:
+[00:34:41] :		 [Surefire report watcher] /opt/teamcity-agent/work/5871d05f33387ade/target/failsafe-reports/TEST-*.xml
+[00:34:40] :	 [Step 1/2] [Maven Watcher] 
+[00:34:40]i:	 [Step 1/2] ##teamcity[projectStarted tc:tags='tc:internal' projectId='org.netology:plaindoll:jar:0.0.2' groupId='org.netology' artifactId='plaindoll' testReportsDir0='/opt/teamcity-agent/work/5871d05f33387ade/target/failsafe-reports' testReportsDir1='/opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports']
+[00:34:41] :	 [Step 1/2] [INFO] 
+[00:34:41] :	 [Step 1/2] [INFO] --- clean:3.2.0:clean (default-clean) @ plaindoll ---
+[00:34:41] :	 [Step 1/2] [INFO] Deleting /opt/teamcity-agent/work/5871d05f33387ade/target
+[00:34:41] :	 [Step 1/2] [INFO] 
+[00:34:41] :	 [Step 1/2] [INFO] --- resources:3.3.1:resources (default-resources) @ plaindoll ---
+[00:34:41] :	 [Step 1/2] Surefire report watcher
+[00:34:41] :		 [Surefire report watcher] Watching paths:
+[00:34:41] :		 [Surefire report watcher] /opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports/TEST-*.xml
+[00:34:41]W:	 [Step 1/2] [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[00:34:41] :	 [Step 1/2] [INFO] skip non existing resourceDirectory /opt/teamcity-agent/work/5871d05f33387ade/src/main/resources
+[00:34:41] :	 [Step 1/2] [INFO] 
+[00:34:41] :	 [Step 1/2] [INFO] --- compiler:3.11.0:compile (default-compile) @ plaindoll ---
+[00:34:41] :	 [Step 1/2] [INFO] Changes detected - recompiling the module! :source
+[00:34:41]W:	 [Step 1/2] [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[00:34:41] :	 [Step 1/2] [INFO] Compiling 2 source files with javac [debug target 1.8] to target/classes
+[00:34:41] :	 [Step 1/2] [INFO] 
+[00:34:41] :	 [Step 1/2] [INFO] --- resources:3.3.1:testResources (default-testResources) @ plaindoll ---
+[00:34:41]W:	 [Step 1/2] [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[00:34:41] :	 [Step 1/2] [INFO] skip non existing resourceDirectory /opt/teamcity-agent/work/5871d05f33387ade/src/test/resources
+[00:34:41] :	 [Step 1/2] [INFO] 
+[00:34:41] :	 [Step 1/2] [INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ plaindoll ---
+[00:34:41] :	 [Step 1/2] [INFO] Changes detected - recompiling the module! :dependency
+[00:34:41]W:	 [Step 1/2] [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[00:34:41] :	 [Step 1/2] [INFO] Compiling 1 source file with javac [debug target 1.8] to target/test-classes
+[00:34:42] :	 [Step 1/2] [INFO] 
+[00:34:42] :	 [Step 1/2] [INFO] --- surefire:3.2.2:test (default-test) @ plaindoll ---
+[00:34:42] :	 [Step 1/2] [INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+[00:34:42] :	 [Step 1/2] [INFO] 
+[00:34:42] :	 [Step 1/2] [INFO] -------------------------------------------------------
+[00:34:42] :	 [Step 1/2] [INFO]  T E S T S
+[00:34:42] :	 [Step 1/2] [INFO] -------------------------------------------------------
+[00:34:42] :	 [Step 1/2] [INFO] Running plaindoll.WelcomerTest
+[00:34:42] :	 [Step 1/2] [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.108 s -- in plaindoll.WelcomerTest
+[00:34:42] :	 [Step 1/2] [INFO] 
+[00:34:42] :	 [Step 1/2] [INFO] Results:
+[00:34:42] :	 [Step 1/2] [INFO] 
+[00:34:42] :	 [Step 1/2] [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+[00:34:42] :	 [Step 1/2] [INFO] 
+[00:34:42] :	 [Step 1/2] [Maven Watcher] 
+[00:34:42]i:	 [Step 1/2] ##teamcity[projectFinished tc:tags='tc:internal' projectId='org.netology:plaindoll:jar:0.0.2']
+[00:34:42] :	 [Step 1/2] [INFO] ------------------------------------------------------------------------
+[00:34:42] :	 [Step 1/2] [INFO] BUILD SUCCESS
+[00:34:42] :	 [Step 1/2] [INFO] ------------------------------------------------------------------------
+[00:34:42] :	 [Step 1/2] [INFO] Total time:  2.042 s
+[00:34:42] :	 [Step 1/2] [INFO] Finished at: 2026-03-17T00:34:42Z
+[00:34:42] :	 [Step 1/2] [INFO] ------------------------------------------------------------------------
+[00:34:42] :	 [Step 1/2] [Maven Watcher] building report document...
+[00:34:42] :	 [Step 1/2] [Maven Watcher] building report document done
+[00:34:42] :	 [Step 1/2] [Maven Watcher] writing report to /opt/teamcity-agent/temp/buildTmp/maven-build-info.xml
+[00:34:42] :	 [Step 1/2] [Maven Watcher] done writing report
+[00:34:43]i:	 [Step 1/2] plaindoll.WelcomerTest
+[00:34:43]i:		 [plaindoll.WelcomerTest] welcomerSaysFarewell
+[00:34:43]i:		 [plaindoll.WelcomerTest] welcomerSaysHunter
+[00:34:43]i:		 [plaindoll.WelcomerTest] welcomerSaysSilver
+[00:34:43]i:		 [plaindoll.WelcomerTest] welcomerSaysSomething
+[00:34:43]i:		 [plaindoll.WelcomerTest] welcomerSaysWelcome
+[00:34:43] :	 [Step 1/2] Process exited with code 0
+[00:34:43] :	 [Step 1/2] Publishing artifacts
+[00:34:43] :		 [Publishing artifacts] Collecting files to publish: [/opt/teamcity-agent/temp/buildTmp/.tc-maven-bi/maven-build-info.xml.gz => .teamcity]
+[00:34:43] :		 [Publishing artifacts] Publishing 1 file using [WebPublisher]: /opt/teamcity-agent/temp/buildTmp/.tc-maven-bi/maven-build-info.xml.gz => .teamcity
+[00:34:43] :		 [Publishing artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]: /opt/teamcity-agent/temp/buildTmp/.tc-maven-bi/maven-build-info.xml.gz => .teamcity
+[00:34:43]i:		 [Publishing artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[00:34:43] :	 [Step 1/2] Waiting for 2 service processes to complete
+[00:34:43] :	 [Step 1/2] Surefire report watcher
+[00:34:43] :		 [Surefire report watcher] 1 report found for paths:
+[00:34:43] :		 [Surefire report watcher] /opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports/TEST-*.xml
+[00:34:43] :		 [Surefire report watcher] Successfully parsed
+[00:34:43] :			 [Successfully parsed] 1 report
+[00:34:43] :			 [Successfully parsed] target/surefire-reports/TEST-plaindoll.WelcomerTest.xml
+[00:34:43]E: Step 2/2: Maven Deploy for master (Maven) (31s)
+[00:34:43]i:	 [Step 2/2] Build step condition "vcsroot.branch equals refs/heads/master" is satisfied
+[00:34:43] :	 [Step 2/2] Using predefined Maven user settings: settings.xml
+[00:34:43] :	 [Step 2/2] Using predefined Maven user settings: settings.xml
+[00:34:43] :	 [Step 2/2] Initial M2_HOME not set
+[00:34:43] :	 [Step 2/2] Current M2_HOME = /opt/teamcity-agent/tools/maven3_9
+[00:34:43] :	 [Step 2/2] PATH = /opt/teamcity-agent/tools/maven3_9/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+[00:34:43] :	 [Step 2/2] Using watcher: /opt/teamcity-agent/plugins/mavenPlugin/maven-watcher-jdk17/maven-watcher-agent.jar
+[00:34:43] :	 [Step 2/2] Using agent local repository at /opt/teamcity-agent/system/jetbrains.maven.runner/maven.repo.local
+[00:34:43] :	 [Step 2/2] *** Start reading the project structure ***
+[00:34:43]i:	 [Step 2/2] Initial MAVEN_OPTS not set
+[00:34:43]i:	 [Step 2/2] Current MAVEN_OPTS not set
+[00:34:45]i:	 [Step 2/2] [INFO] Scanning for projects...
+[00:34:45]i:	 [Step 2/2] [INFO] 
+[00:34:45]i:	 [Step 2/2] [INFO] -----------------------< org.netology:plaindoll >-----------------------
+[00:34:45]i:	 [Step 2/2] [INFO] Building plaindoll 0.0.2
+[00:34:45]i:	 [Step 2/2] [INFO]   from info.6864672941845275361.pom.xml
+[00:34:45]i:	 [Step 2/2] [INFO] --------------------------------[ jar ]---------------------------------
+[00:34:45]i:	 [Step 2/2] [INFO] 
+[00:34:45]i:	 [Step 2/2] [INFO] --- info3:1.4.8:info (default-cli) @ plaindoll ---
+[00:34:45]i:	 [Step 2/2] [INFO] ------------------------------------------------------------------------
+[00:34:45]i:	 [Step 2/2] [INFO] BUILD SUCCESS
+[00:34:45]i:	 [Step 2/2] [INFO] ------------------------------------------------------------------------
+[00:34:45]i:	 [Step 2/2] [INFO] Total time:  0.437 s
+[00:34:45]i:	 [Step 2/2] [INFO] Finished at: 2026-03-17T00:34:45Z
+[00:34:45]i:	 [Step 2/2] [INFO] ------------------------------------------------------------------------
+[00:34:45]i:	 [Step 2/2] Process exited with code 0
+[00:34:45] :	 [Step 2/2] Initial MAVEN_OPTS not set
+[00:34:45] :	 [Step 2/2] Current MAVEN_OPTS not set
+[00:34:45] :	 [Step 2/2] Starting: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -Dagent.home.dir=/opt/teamcity-agent -Dagent.name=teamcity-agent -Dagent.ownPort=9091 -Dagent.work.dir=/opt/teamcity-agent/work -Dbuild.number=5 -Dbuild.vcs.number=4021122cb6e240aed22836bdae96954fd0c4b9f4 -Dbuild.vcs.number.1=4021122cb6e240aed22836bdae96954fd0c4b9f4 -Dbuild.vcs.number.Netology_HttpsGithubComVegorshkovExampleTeamcity=4021122cb6e240aed22836bdae96954fd0c4b9f4 -Dclassworlds.conf=/opt/teamcity-agent/temp/buildTmp/teamcity.m2.conf -Dcom.jetbrains.maven.watcher.report.file=/opt/teamcity-agent/temp/buildTmp/maven-build-info.xml -Djava.io.tmpdir=/opt/teamcity-agent/temp/buildTmp -Dmaven.home=/opt/teamcity-agent/tools/maven3_9 -Dmaven.multiModuleProjectDirectory=/opt/teamcity-agent/work/5871d05f33387ade -Dteamcity.agent.cpuBenchmark=411 -Dteamcity.auth.password=******* -Dteamcity.auth.userId=TeamCityBuildId=106 -Dteamcity.build.changedFiles.file=/opt/teamcity-agent/temp/buildTmp/teamcity.changedFiles.txt -Dteamcity.build.checkoutDir=/opt/teamcity-agent/work/5871d05f33387ade -Dteamcity.build.id=106 -Dteamcity.build.properties.file=/opt/teamcity-agent/temp/buildTmp/teamcity.build.parameters -Dteamcity.build.properties.file.checksum=/opt/teamcity-agent/temp/buildTmp/teamcity.build.parameters.checksum -Dteamcity.build.tempDir=/opt/teamcity-agent/temp/buildTmp -Dteamcity.build.workingDir=/opt/teamcity-agent/work/5871d05f33387ade -Dteamcity.buildConfName=example-teamcity-build -Dteamcity.buildType.id=Netology_ExampleTeamcityBuild -Dteamcity.configuration.properties.file=/opt/teamcity-agent/temp/buildTmp/teamcity.config.parameters -Dteamcity.maven.userSettings.path=/opt/teamcity-agent/temp/buildTmp/maven_settings_4083658673108457262.xml -Dteamcity.maven.watcher.home=/opt/teamcity-agent/plugins/mavenPlugin/maven-watcher-jdk17 -Dteamcity.projectName=netology -Dteamcity.runner.properties.file=/opt/teamcity-agent/temp/buildTmp/teamcity.runner.parameters -Dteamcity.tests.recentlyFailedTests.file=/opt/teamcity-agent/temp/buildTmp/teamcity.testsToRunFirst.txt -Dteamcity.version=2025.11.3 (build 208117) -Dmaven.repo.local=/opt/teamcity-agent/system/jetbrains.maven.runner/maven.repo.local -classpath /opt/teamcity-agent/tools/maven3_9/boot/plexus-classworlds-2.7.0.jar: org.codehaus.plexus.classworlds.launcher.Launcher -f /opt/teamcity-agent/work/5871d05f33387ade/pom.xml -B -s /opt/teamcity-agent/temp/buildTmp/maven_settings_4083658673108457262.xml clean deploy
+[00:34:45] :	 [Step 2/2] in directory: /opt/teamcity-agent/work/5871d05f33387ade
+[00:34:47] :	 [Step 2/2] [INFO] Scanning for projects...
+[00:34:47] :	 [Step 2/2] [INFO] 
+[00:34:47] :	 [Step 2/2] [INFO] -----------------------< org.netology:plaindoll >-----------------------
+[00:34:47] :	 [Step 2/2] [INFO] Building plaindoll 0.0.2
+[00:34:47] :	 [Step 2/2] [INFO]   from pom.xml
+[00:34:47] :	 [Step 2/2] [INFO] --------------------------------[ jar ]---------------------------------
+[00:34:47] :	 [Step 2/2] [Maven Watcher] project started: org.netology:plaindoll:jar:0.0.2
+[00:34:47] :	 [Step 2/2] org.netology:plaindoll (27s)
+[00:34:47]i:		 [org.netology:plaindoll] ##teamcity[importData tc:tags='tc:internal' type='surefire' path='/opt/teamcity-agent/work/5871d05f33387ade/target/failsafe-reports/TEST-*.xml' whenNoDataPublished='nothing' logAsInternal='true' rerunFailingTestsEnabled='false']
+[00:34:47]i:		 [org.netology:plaindoll] ##teamcity[importData tc:tags='tc:internal' type='surefire' path='/opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports/TEST-*.xml' whenNoDataPublished='nothing' logAsInternal='true' rerunFailingTestsEnabled='false']
+[00:34:47] :	 [Step 2/2] Importing data from '/opt/teamcity-agent/work/5871d05f33387ade/target/failsafe-reports/TEST-*.xml' with 'surefire' processor
+[00:34:47] :	 [Step 2/2] Importing data from '/opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports/TEST-*.xml' with 'surefire' processor
+[00:34:47] :	 [Step 2/2] Surefire report watcher
+[00:34:47] :		 [Surefire report watcher] Watching paths:
+[00:34:47] :		 [Surefire report watcher] /opt/teamcity-agent/work/5871d05f33387ade/target/failsafe-reports/TEST-*.xml
+[00:34:47] :	 [Step 2/2] [Maven Watcher] 
+[00:34:47]i:	 [Step 2/2] ##teamcity[projectStarted tc:tags='tc:internal' projectId='org.netology:plaindoll:jar:0.0.2' groupId='org.netology' artifactId='plaindoll' testReportsDir0='/opt/teamcity-agent/work/5871d05f33387ade/target/failsafe-reports' testReportsDir1='/opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports']
+[00:34:47] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.3.0/maven-jar-plugin-3.3.0.pom
+[00:34:47] :	 [Step 2/2] Surefire report watcher
+[00:34:47] :		 [Surefire report watcher] Watching paths:
+[00:34:47] :		 [Surefire report watcher] /opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports/TEST-*.xml
+[00:34:47] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.3.0/maven-jar-plugin-3.3.0.pom (6.8 kB at 20 kB/s)
+[00:34:47] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/37/maven-plugins-37.pom
+[00:34:47] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/37/maven-plugins-37.pom (9.9 kB at 309 kB/s)
+[00:34:47] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/37/maven-parent-37.pom
+[00:34:47] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/37/maven-parent-37.pom (46 kB at 1.2 MB/s)
+[00:34:47] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/27/apache-27.pom
+[00:34:47] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/27/apache-27.pom (20 kB at 657 kB/s)
+[00:34:48] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.3.0/maven-jar-plugin-3.3.0.jar
+[00:34:48] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.3.0/maven-jar-plugin-3.3.0.jar (27 kB at 804 kB/s)
+[00:34:48] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.2.4/maven-shade-plugin-3.2.4.pom
+[00:34:48] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.2.4/maven-shade-plugin-3.2.4.pom (11 kB at 336 kB/s)
+[00:34:48] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/34/maven-plugins-34.pom
+[00:34:48] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/34/maven-plugins-34.pom (11 kB at 382 kB/s)
+[00:34:48] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.2.4/maven-shade-plugin-3.2.4.jar
+[00:34:48] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.2.4/maven-shade-plugin-3.2.4.jar (134 kB at 3.7 MB/s)
+[00:34:48] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-install-plugin/3.1.1/maven-install-plugin-3.1.1.pom
+[00:34:48] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-install-plugin/3.1.1/maven-install-plugin-3.1.1.pom (7.8 kB at 289 kB/s)
+[00:34:48] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-install-plugin/3.1.1/maven-install-plugin-3.1.1.jar
+[00:34:48] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-install-plugin/3.1.1/maven-install-plugin-3.1.1.jar (31 kB at 977 kB/s)
+[00:34:48] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-deploy-plugin/3.1.1/maven-deploy-plugin-3.1.1.pom
+[00:34:48] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-deploy-plugin/3.1.1/maven-deploy-plugin-3.1.1.pom (8.9 kB at 316 kB/s)
+[00:34:48] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-deploy-plugin/3.1.1/maven-deploy-plugin-3.1.1.jar
+[00:34:48] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-deploy-plugin/3.1.1/maven-deploy-plugin-3.1.1.jar (39 kB at 1.2 MB/s)
+[00:34:48] :	 [Step 2/2] [INFO] 
+[00:34:48] :	 [Step 2/2] [INFO] --- clean:3.2.0:clean (default-clean) @ plaindoll ---
+[00:34:48] :	 [Step 2/2] [INFO] Deleting /opt/teamcity-agent/work/5871d05f33387ade/target
+[00:34:48] :	 [Step 2/2] [INFO] 
+[00:34:48] :	 [Step 2/2] [INFO] --- resources:3.3.1:resources (default-resources) @ plaindoll ---
+[00:34:48]W:	 [Step 2/2] [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[00:34:48] :	 [Step 2/2] [INFO] skip non existing resourceDirectory /opt/teamcity-agent/work/5871d05f33387ade/src/main/resources
+[00:34:48] :	 [Step 2/2] [INFO] 
+[00:34:48] :	 [Step 2/2] [INFO] --- compiler:3.11.0:compile (default-compile) @ plaindoll ---
+[00:34:48] :	 [Step 2/2] [INFO] Changes detected - recompiling the module! :source
+[00:34:48]W:	 [Step 2/2] [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[00:34:48] :	 [Step 2/2] [INFO] Compiling 2 source files with javac [debug target 1.8] to target/classes
+[00:34:49] :	 [Step 2/2] [INFO] 
+[00:34:49] :	 [Step 2/2] [INFO] --- resources:3.3.1:testResources (default-testResources) @ plaindoll ---
+[00:34:49]W:	 [Step 2/2] [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[00:34:49] :	 [Step 2/2] [INFO] skip non existing resourceDirectory /opt/teamcity-agent/work/5871d05f33387ade/src/test/resources
+[00:34:49] :	 [Step 2/2] [INFO] 
+[00:34:49] :	 [Step 2/2] [INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ plaindoll ---
+[00:34:49] :	 [Step 2/2] [INFO] Changes detected - recompiling the module! :dependency
+[00:34:49]W:	 [Step 2/2] [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[00:34:49] :	 [Step 2/2] [INFO] Compiling 1 source file with javac [debug target 1.8] to target/test-classes
+[00:34:49] :	 [Step 2/2] [INFO] 
+[00:34:49] :	 [Step 2/2] [INFO] --- surefire:3.2.2:test (default-test) @ plaindoll ---
+[00:34:49] :	 [Step 2/2] [INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+[00:34:49] :	 [Step 2/2] [INFO] 
+[00:34:49] :	 [Step 2/2] [INFO] -------------------------------------------------------
+[00:34:49] :	 [Step 2/2] [INFO]  T E S T S
+[00:34:49] :	 [Step 2/2] [INFO] -------------------------------------------------------
+[00:34:50] :	 [Step 2/2] [INFO] Running plaindoll.WelcomerTest
+[00:34:50] :	 [Step 2/2] [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.070 s -- in plaindoll.WelcomerTest
+[00:34:50] :	 [Step 2/2] [INFO] 
+[00:34:50] :	 [Step 2/2] [INFO] Results:
+[00:34:50] :	 [Step 2/2] [INFO] 
+[00:34:50] :	 [Step 2/2] [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+[00:34:50] :	 [Step 2/2] [INFO] 
+[00:34:50] :	 [Step 2/2] [INFO] 
+[00:34:50] :	 [Step 2/2] [INFO] --- jar:3.3.0:jar (default-jar) @ plaindoll ---
+[00:34:50] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/file-management/3.1.0/file-management-3.1.0.pom
+[00:34:50] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/file-management/3.1.0/file-management-3.1.0.pom (4.5 kB at 166 kB/s)
+[00:34:50] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/36/maven-shared-components-36.pom
+[00:34:50] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/36/maven-shared-components-36.pom (4.9 kB at 175 kB/s)
+[00:34:50] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/36/maven-parent-36.pom
+[00:34:50] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/36/maven-parent-36.pom (45 kB at 1.7 MB/s)
+[00:34:50] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/26/apache-26.pom
+[00:34:50] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/26/apache-26.pom (21 kB at 734 kB/s)
+[00:34:50] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.3.0/plexus-utils-3.3.0.pom
+[00:34:50] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.3.0/plexus-utils-3.3.0.pom (5.2 kB at 179 kB/s)
+[00:34:50] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/3.6.0/maven-archiver-3.6.0.pom
+[00:34:50] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/3.6.0/maven-archiver-3.6.0.pom (3.9 kB at 157 kB/s)
+[00:34:50] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.4.0/plexus-io-3.4.0.pom
+[00:34:50] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.4.0/plexus-io-3.4.0.pom (6.0 kB at 223 kB/s)
+[00:34:50] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.4.0/plexus-archiver-4.4.0.pom
+[00:34:50] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.4.0/plexus-archiver-4.4.0.pom (6.3 kB at 261 kB/s)
+[00:34:50] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.21/commons-compress-1.21.pom
+[00:34:50] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.21/commons-compress-1.21.pom (20 kB at 615 kB/s)
+[00:34:50] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/iq80/snappy/snappy/0.4/snappy-0.4.pom
+[00:34:50] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/iq80/snappy/snappy/0.4/snappy-0.4.pom (15 kB at 519 kB/s)
+[00:34:50] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/tukaani/xz/1.9/xz-1.9.pom
+[00:34:50] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/tukaani/xz/1.9/xz-1.9.pom (2.0 kB at 73 kB/s)
+[00:34:50] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.4.2/plexus-utils-3.4.2.pom
+[00:34:50] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.4.2/plexus-utils-3.4.2.pom (8.2 kB at 329 kB/s)
+[00:34:50] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/8/plexus-8.pom
+[00:34:50] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/8/plexus-8.pom (25 kB at 978 kB/s)
+[00:34:50] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/file-management/3.1.0/file-management-3.1.0.jar
+[00:34:50] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/file-management/3.1.0/file-management-3.1.0.jar (36 kB at 1.4 MB/s)
+[00:34:50] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.4.0/plexus-io-3.4.0.jar
+[00:34:50] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.4.0/plexus-archiver-4.4.0.jar
+[00:34:50] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/3.6.0/maven-archiver-3.6.0.jar
+[00:34:50]i:	 [Step 2/2] plaindoll.WelcomerTest
+[00:34:50]i:		 [plaindoll.WelcomerTest] welcomerSaysFarewell
+[00:34:50]i:		 [plaindoll.WelcomerTest] welcomerSaysHunter
+[00:34:50]i:		 [plaindoll.WelcomerTest] welcomerSaysSilver
+[00:34:50]i:		 [plaindoll.WelcomerTest] welcomerSaysSomething
+[00:34:50]i:		 [plaindoll.WelcomerTest] welcomerSaysWelcome
+[00:34:50] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar
+[00:34:50] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.4.0/plexus-io-3.4.0.jar (79 kB at 2.4 MB/s)
+[00:34:50] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/tukaani/xz/1.9/xz-1.9.jar
+[00:34:50] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/iq80/snappy/snappy/0.4/snappy-0.4.jar
+[00:34:50] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/tukaani/xz/1.9/xz-1.9.jar (116 kB at 4.5 MB/s)
+[00:34:50] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.4.2/plexus-utils-3.4.2.jar
+[00:34:50] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/3.6.0/maven-archiver-3.6.0.jar (26 kB at 404 kB/s)
+[00:34:50] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.4.2/plexus-utils-3.4.2.jar (267 kB at 3.8 MB/s)
+[00:34:50] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.4.0/plexus-archiver-4.4.0.jar (211 kB at 1.7 MB/s)
+[00:34:50] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/iq80/snappy/snappy/0.4/snappy-0.4.jar (58 kB at 508 kB/s)
+[00:34:50] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar (1.0 MB at 5.9 MB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Building jar: /opt/teamcity-agent/work/5871d05f33387ade/target/plaindoll-0.0.2.jar
+[00:34:51] :	 [Step 2/2] [INFO] 
+[00:34:51] :	 [Step 2/2] [INFO] --- shade:3.2.4:shade (default) @ plaindoll ---
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.0/maven-plugin-api-3.0.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.0/maven-plugin-api-3.0.pom (2.3 kB at 62 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/3.0/maven-3.0.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/3.0/maven-3.0.pom (22 kB at 625 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/15/maven-parent-15.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/15/maven-parent-15.pom (24 kB at 727 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/6/apache-6.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/6/apache-6.pom (13 kB at 413 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.0/maven-model-3.0.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.0/maven-model-3.0.pom (3.9 kB at 118 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/2.0.4/plexus-utils-2.0.4.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/2.0.4/plexus-utils-2.0.4.pom (3.3 kB at 101 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.6/plexus-2.0.6.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.6/plexus-2.0.6.pom (17 kB at 578 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.0/maven-artifact-3.0.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.0/maven-artifact-3.0.pom (1.9 kB at 66 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2.pom (5.4 kB at 163 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/inject/guice-plexus/1.4.2/guice-plexus-1.4.2.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/inject/guice-plexus/1.4.2/guice-plexus-1.4.2.pom (3.1 kB at 101 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/inject/guice-bean/1.4.2/guice-bean-1.4.2.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/inject/guice-bean/1.4.2/guice-bean-1.4.2.pom (2.6 kB at 90 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject/1.4.2/sisu-inject-1.4.2.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject/1.4.2/sisu-inject-1.4.2.pom (1.2 kB at 42 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-parent/1.4.2/sisu-parent-1.4.2.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-parent/1.4.2/sisu-parent-1.4.2.pom (7.8 kB at 199 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/6/forge-parent-6.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/6/forge-parent-6.pom (11 kB at 316 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.0.0/plexus-component-annotations-2.0.0.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.0.0/plexus-component-annotations-2.0.0.pom (750 B at 25 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/2.0.0/plexus-containers-2.0.0.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/2.0.0/plexus-containers-2.0.0.pom (4.8 kB at 166 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.2.3/plexus-classworlds-2.2.3.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.2.3/plexus-classworlds-2.2.3.pom (4.0 kB at 148 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/2.0.5/plexus-utils-2.0.5.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/2.0.5/plexus-utils-2.0.5.pom (3.3 kB at 119 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-bean/1.4.2/sisu-inject-bean-1.4.2.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-bean/1.4.2/sisu-inject-bean-1.4.2.pom (5.5 kB at 188 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-2.1.7.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-2.1.7.pom (11 kB at 381 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/3.0/maven-core-3.0.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/3.0/maven-core-3.0.pom (6.6 kB at 255 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/3.0/maven-settings-3.0.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/3.0/maven-settings-3.0.pom (1.9 kB at 67 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings-builder/3.0/maven-settings-builder-3.0.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings-builder/3.0/maven-settings-builder-3.0.pom (2.2 kB at 69 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.14/plexus-interpolation-1.14.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.14/plexus-interpolation-1.14.pom (910 B at 30 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.1.18/plexus-components-1.1.18.pom
+[00:34:51] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.1.18/plexus-components-1.1.18.pom (5.4 kB at 198 kB/s)
+[00:34:51] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.5/plexus-utils-1.5.5.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.5/plexus-utils-1.5.5.pom (5.1 kB at 184 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/1.0.11/plexus-1.0.11.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/1.0.11/plexus-1.0.11.pom (9.0 kB at 332 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/3.0/maven-repository-metadata-3.0.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/3.0/maven-repository-metadata-3.0.pom (1.9 kB at 71 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model-builder/3.0/maven-model-builder-3.0.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model-builder/3.0/maven-model-builder-3.0.pom (2.2 kB at 83 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-aether-provider/3.0/maven-aether-provider-3.0.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-aether-provider/3.0/maven-aether-provider-3.0.pom (2.5 kB at 85 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-api/1.7/aether-api-1.7.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-api/1.7/aether-api-1.7.pom (1.7 kB at 56 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-parent/1.7/aether-parent-1.7.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-parent/1.7/aether-parent-1.7.pom (7.7 kB at 258 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-util/1.7/aether-util-1.7.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-util/1.7/aether-util-1.7.pom (2.1 kB at 69 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-impl/1.7/aether-impl-1.7.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-impl/1.7/aether-impl-1.7.pom (3.7 kB at 115 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-spi/1.7/aether-spi-1.7.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-spi/1.7/aether-spi-1.7.pom (1.7 kB at 58 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-artifact-transfer/0.12.0/maven-artifact-transfer-0.12.0.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-artifact-transfer/0.12.0/maven-artifact-transfer-0.12.0.pom (11 kB at 331 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/33/maven-shared-components-33.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/33/maven-shared-components-33.pom (5.1 kB at 176 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/33/maven-parent-33.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/33/maven-parent-33.pom (44 kB at 1.5 MB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/21/apache-21.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/21/apache-21.pom (17 kB at 634 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.0.1/maven-common-artifact-filters-3.0.1.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.0.1/maven-common-artifact-filters-3.0.1.pom (4.8 kB at 147 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/30/maven-shared-components-30.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/30/maven-shared-components-30.pom (4.6 kB at 153 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/30/maven-parent-30.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/30/maven-parent-30.pom (41 kB at 1.4 MB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.1.0/maven-shared-utils-3.1.0.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.1.0/maven-shared-utils-3.1.0.pom (5.0 kB at 166 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.5/commons-io-2.5.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.5/commons-io-2.5.pom (13 kB at 429 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/39/commons-parent-39.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/39/commons-parent-39.pom (62 kB at 2.0 MB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/16/apache-16.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/16/apache-16.pom (15 kB at 497 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.1.1/plexus-utils-3.1.1.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.1.1/plexus-utils-3.1.1.pom (5.1 kB at 169 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/4.0/plexus-4.0.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/4.0/plexus-4.0.pom (22 kB at 652 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.11/commons-codec-1.11.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.11/commons-codec-1.11.pom (14 kB at 349 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.pom (2.7 kB at 87 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.5/slf4j-parent-1.7.5.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.5/slf4j-parent-1.7.5.pom (12 kB at 311 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/8.0/asm-8.0.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/8.0/asm-8.0.pom (2.9 kB at 89 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/ow2/1.5/ow2-1.5.pom
+[00:34:52] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/ow2/1.5/ow2-1.5.pom (11 kB at 387 kB/s)
+[00:34:52] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/8.0/asm-commons-8.0.pom
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/8.0/asm-commons-8.0.pom (3.7 kB at 105 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/8.0/asm-tree-8.0.pom
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/8.0/asm-tree-8.0.pom (3.1 kB at 101 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-analysis/8.0/asm-analysis-8.0.pom
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-analysis/8.0/asm-analysis-8.0.pom (3.2 kB at 88 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6/jdom2-2.0.6.pom
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6/jdom2-2.0.6.pom (4.6 kB at 159 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.0.1/maven-dependency-tree-3.0.1.pom
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.0.1/maven-dependency-tree-3.0.1.pom (7.5 kB at 242 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/0.9.0.M2/aether-util-0.9.0.M2.pom
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/0.9.0.M2/aether-util-0.9.0.M2.pom (2.0 kB at 73 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether/0.9.0.M2/aether-0.9.0.M2.pom
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether/0.9.0.M2/aether-0.9.0.M2.pom (28 kB at 899 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/vafer/jdependency/2.4.0/jdependency-2.4.0.pom
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/vafer/jdependency/2.4.0/jdependency-2.4.0.pom (15 kB at 443 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-util/8.0/asm-util-8.0.pom
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-util/8.0/asm-util-8.0.pom (3.7 kB at 135 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/28.2-android/guava-28.2-android.pom
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/28.2-android/guava-28.2-android.pom (11 kB at 377 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/28.2-android/guava-parent-28.2-android.pom
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/28.2-android/guava-parent-28.2-android.pom (13 kB at 380 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.pom
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.pom (2.4 kB at 89 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/26.0-android/guava-parent-26.0-android.pom
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/26.0-android/guava-parent-26.0-android.pom (10 kB at 407 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.pom
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.pom (2.3 kB at 84 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.pom
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.pom (4.3 kB at 153 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-compat-qual/2.5.5/checker-compat-qual-2.5.5.pom
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-compat-qual/2.5.5/checker-compat-qual-2.5.5.pom (2.7 kB at 89 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.3.4/error_prone_annotations-2.3.4.pom
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.3.4/error_prone_annotations-2.3.4.pom (2.1 kB at 73 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_parent/2.3.4/error_prone_parent-2.3.4.pom
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_parent/2.3.4/error_prone_parent-2.3.4.pom (5.4 kB at 201 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.pom
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.pom (2.8 kB at 89 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.7/commons-lang3-3.7.pom
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.7/commons-lang3-3.7.pom (28 kB at 918 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.0/maven-plugin-api-3.0.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.0/maven-plugin-api-3.0.jar (49 kB at 1.6 MB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-bean/1.4.2/sisu-inject-bean-1.4.2.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-2.1.7-noaop.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/3.0/maven-core-3.0.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.0/maven-model-3.0.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2.jar (202 kB at 5.8 MB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/3.0/maven-settings-3.0.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-bean/1.4.2/sisu-inject-bean-1.4.2.jar (153 kB at 3.0 MB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings-builder/3.0/maven-settings-builder-3.0.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.0/maven-model-3.0.jar (165 kB at 3.3 MB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/3.0/maven-repository-metadata-3.0.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/3.0/maven-settings-3.0.jar (47 kB at 864 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model-builder/3.0/maven-model-builder-3.0.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-2.1.7-noaop.jar (472 kB at 7.3 MB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-aether-provider/3.0/maven-aether-provider-3.0.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings-builder/3.0/maven-settings-builder-3.0.jar (38 kB at 504 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/3.0/maven-core-3.0.jar (527 kB at 6.9 MB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-impl/1.7/aether-impl-1.7.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/3.0/maven-repository-metadata-3.0.jar (30 kB at 391 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-spi/1.7/aether-spi-1.7.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-api/1.7/aether-api-1.7.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model-builder/3.0/maven-model-builder-3.0.jar (148 kB at 1.8 MB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-util/1.7/aether-util-1.7.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-aether-provider/3.0/maven-aether-provider-3.0.jar (51 kB at 528 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.14/plexus-interpolation-1.14.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-spi/1.7/aether-spi-1.7.jar (14 kB at 132 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.2.3/plexus-classworlds-2.2.3.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-impl/1.7/aether-impl-1.7.jar (106 kB at 984 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.0.0/plexus-component-annotations-2.0.0.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-util/1.7/aether-util-1.7.jar (108 kB at 973 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-api/1.7/aether-api-1.7.jar (74 kB at 656 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.14/plexus-interpolation-1.14.jar (61 kB at 481 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.0/maven-artifact-3.0.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.2.3/plexus-classworlds-2.2.3.jar (46 kB at 352 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.3.0/plexus-utils-3.3.0.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.0.0/plexus-component-annotations-2.0.0.jar (4.2 kB at 32 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-artifact-transfer/0.12.0/maven-artifact-transfer-0.12.0.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.jar (13 kB at 94 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.0.1/maven-common-artifact-filters-3.0.1.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.jar (29 kB at 198 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.1.0/maven-shared-utils-3.1.0.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.0/maven-artifact-3.0.jar (52 kB at 329 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.11/commons-codec-1.11.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-artifact-transfer/0.12.0/maven-artifact-transfer-0.12.0.jar (120 kB at 734 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.0.1/maven-common-artifact-filters-3.0.1.jar (61 kB at 361 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/8.0/asm-8.0.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.1.0/maven-shared-utils-3.1.0.jar (164 kB at 920 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/8.0/asm-commons-8.0.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.3.0/plexus-utils-3.3.0.jar (263 kB at 1.4 MB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/8.0/asm-tree-8.0.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar (26 kB at 137 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-analysis/8.0/asm-analysis-8.0.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.11/commons-codec-1.11.jar (335 kB at 1.7 MB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6/jdom2-2.0.6.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/8.0/asm-8.0.jar (122 kB at 602 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.0.1/maven-dependency-tree-3.0.1.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/8.0/asm-tree-8.0.jar (53 kB at 249 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/8.0/asm-commons-8.0.jar (72 kB at 339 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/0.9.0.M2/aether-util-0.9.0.M2.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/vafer/jdependency/2.4.0/jdependency-2.4.0.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-analysis/8.0/asm-analysis-8.0.jar (33 kB at 155 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-util/8.0/asm-util-8.0.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.0.1/maven-dependency-tree-3.0.1.jar (37 kB at 158 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/28.2-android/guava-28.2-android.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6/jdom2-2.0.6.jar (305 kB at 1.3 MB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/0.9.0.M2/aether-util-0.9.0.M2.jar (134 kB at 550 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-util/8.0/asm-util-8.0.jar (85 kB at 347 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/vafer/jdependency/2.4.0/jdependency-2.4.0.jar (180 kB at 726 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-compat-qual/2.5.5/checker-compat-qual-2.5.5.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar (4.6 kB at 18 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.3.4/error_prone_annotations-2.3.4.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar (2.2 kB at 8.2 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar
+[00:34:53] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar (20 kB at 74 kB/s)
+[00:34:53] :	 [Step 2/2] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.7/commons-lang3-3.7.jar
+[00:34:54] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-compat-qual/2.5.5/checker-compat-qual-2.5.5.jar (5.9 kB at 21 kB/s)
+[00:34:54] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.3.4/error_prone_annotations-2.3.4.jar (14 kB at 49 kB/s)
+[00:34:54] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar (8.8 kB at 30 kB/s)
+[00:34:54] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/28.2-android/guava-28.2-android.jar (2.6 MB at 8.6 MB/s)
+[00:34:54] :	 [Step 2/2] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.7/commons-lang3-3.7.jar (500 kB at 1.6 MB/s)
+[00:34:54] :	 [Step 2/2] [INFO] Replacing original artifact with shaded artifact.
+[00:34:54] :	 [Step 2/2] [INFO] Replacing /opt/teamcity-agent/work/5871d05f33387ade/target/plaindoll-0.0.2.jar with /opt/teamcity-agent/work/5871d05f33387ade/target/plaindoll-0.0.2-shaded.jar
+[00:34:54] :	 [Step 2/2] [INFO] 
+[00:34:54] :	 [Step 2/2] [INFO] --- install:3.1.1:install (default-install) @ plaindoll ---
+[00:34:54] :	 [Step 2/2] [INFO] Installing /opt/teamcity-agent/work/5871d05f33387ade/pom.xml to /opt/teamcity-agent/system/jetbrains.maven.runner/maven.repo.local/org/netology/plaindoll/0.0.2/plaindoll-0.0.2.pom
+[00:34:54] :	 [Step 2/2] [INFO] Installing /opt/teamcity-agent/work/5871d05f33387ade/target/plaindoll-0.0.2.jar to /opt/teamcity-agent/system/jetbrains.maven.runner/maven.repo.local/org/netology/plaindoll/0.0.2/plaindoll-0.0.2.jar
+[00:34:54] :	 [Step 2/2] [INFO] 
+[00:34:54] :	 [Step 2/2] [INFO] --- deploy:3.1.1:deploy (default-deploy) @ plaindoll ---
+[00:34:54] :	 [Step 2/2] [INFO] Uploading to nexus: http://51.250.13.64:8081/repository/maven-releases/org/netology/plaindoll/0.0.2/plaindoll-0.0.2.pom
+[00:35:04] :	 [Step 2/2] [INFO] Uploading to nexus: http://51.250.13.64:8081/repository/maven-releases/org/netology/plaindoll/0.0.2/plaindoll-0.0.2.jar
+[00:35:14] :	 [Step 2/2] [Maven Watcher] 
+[00:35:14]E:	 [Step 2/2] Failed to execute goal org.apache.maven.plugins:maven-deploy-plugin:3.1.1:deploy (default-deploy) on project plaindoll: Failed to deploy artifacts: Could not transfer artifact org.netology:plaindoll:pom:0.0.2 from/to nexus (http://51.250.13.64:8081/repository/maven-releases): Connect to 51.250.13.64:8081 [/51.250.13.64] failed: connect timed out
+[00:35:14] :	 [Step 2/2] [Maven Watcher] 
+[00:35:14]i:	 [Step 2/2] ##teamcity[projectFinished tc:tags='tc:internal' projectId='org.netology:plaindoll:jar:0.0.2']
+[00:35:14] :	 [Step 2/2] [INFO] ------------------------------------------------------------------------
+[00:35:14] :	 [Step 2/2] [INFO] BUILD FAILURE
+[00:35:14] :	 [Step 2/2] [INFO] ------------------------------------------------------------------------
+[00:35:14] :	 [Step 2/2] [INFO] Total time:  27.213 s
+[00:35:14] :	 [Step 2/2] [INFO] Finished at: 2026-03-17T00:35:14Z
+[00:35:14] :	 [Step 2/2] [INFO] ------------------------------------------------------------------------
+[00:35:14] :	 [Step 2/2] [Maven Watcher] building report document...
+[00:35:14] :	 [Step 2/2] [Maven Watcher] building report document done
+[00:35:14] :	 [Step 2/2] [Maven Watcher] writing report to /opt/teamcity-agent/temp/buildTmp/maven-build-info.xml
+[00:35:14] :	 [Step 2/2] [Maven Watcher] done writing report
+[00:35:14]W:	 [Step 2/2] [ERROR] Failed to execute goal org.apache.maven.plugins:maven-deploy-plugin:3.1.1:deploy (default-deploy) on project plaindoll: Failed to deploy artifacts: Could not transfer artifact org.netology:plaindoll:pom:0.0.2 from/to nexus (http://51.250.13.64:8081/repository/maven-releases): Connect to 51.250.13.64:8081 [/51.250.13.64] failed: connect timed out -> [Help 1]
+[00:35:14]W:	 [Step 2/2] [ERROR] 
+[00:35:14]W:	 [Step 2/2] [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[00:35:14]W:	 [Step 2/2] [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[00:35:14]W:	 [Step 2/2] [ERROR] 
+[00:35:14]W:	 [Step 2/2] [ERROR] For more information about the errors and possible solutions, please read the following articles:
+[00:35:14]W:	 [Step 2/2] [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[00:35:14]W:	 [Step 2/2] Process exited with code 1
+[00:35:14] :	 [Step 2/2] Publishing artifacts
+[00:35:14] :		 [Publishing artifacts] Collecting files to publish: [/opt/teamcity-agent/temp/buildTmp/.tc-maven-bi/maven-build-info.1.xml.gz => .teamcity]
+[00:35:14] :		 [Publishing artifacts] Publishing 1 file using [WebPublisher]: /opt/teamcity-agent/temp/buildTmp/.tc-maven-bi/maven-build-info.1.xml.gz => .teamcity
+[00:35:14] :		 [Publishing artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]: /opt/teamcity-agent/temp/buildTmp/.tc-maven-bi/maven-build-info.1.xml.gz => .teamcity
+[00:35:14]i:		 [Publishing artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[00:35:14]E:	 [Step 2/2] Process exited with code 1 (Step: Maven Deploy for master (Maven))
+[00:35:14] :	 [Step 2/2] Waiting for 2 service processes to complete
+[00:35:14] :	 [Step 2/2] Surefire report watcher
+[00:35:14] :		 [Surefire report watcher] 1 report found for paths:
+[00:35:14] :		 [Surefire report watcher] /opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports/TEST-*.xml
+[00:35:14] :		 [Surefire report watcher] Successfully parsed
+[00:35:14] :			 [Successfully parsed] 1 report
+[00:35:14] :			 [Successfully parsed] target/surefire-reports/TEST-plaindoll.WelcomerTest.xml
+[00:35:14]E:	 [Step 2/2] Step Maven Deploy for master (Maven) failed
+[00:35:14]i: Stopping performance monitoring process
+[00:35:16]i: Performance monitoring process stopped
+[00:35:16]i: Publishing performance monitoring build stages data
+[00:35:16] : Publishing artifacts
+[00:35:16] :	 [Publishing artifacts] Collecting files to publish: [/opt/teamcity-agent/system/perfmon/temp/106/perfmon.csv=>.teamcity/perfmon/, /opt/teamcity-agent/temp/agentTmp/build_stages.txt=>.teamcity/perfmon/]
+[00:35:16] :	 [Publishing artifacts] Publishing 2 files using [WebPublisher]: /opt/teamcity-agent/system/perfmon/temp/106/perfmon.csv, /opt/teamcity-agent/temp/agentTmp/build_stages.txt => .teamcity/perfmon
+[00:35:16] :	 [Publishing artifacts] Publishing 2 files using [ArtifactsCachePublisherImpl]: /opt/teamcity-agent/system/perfmon/temp/106/perfmon.csv, /opt/teamcity-agent/temp/agentTmp/build_stages.txt => .teamcity/perfmon
+[00:35:16]i:	 [Publishing artifacts] Will publish 2 artifact(s) to TeamCity node with id MAIN_SERVER
+[00:35:16] : Publishing internal artifacts
+[00:35:16] :	 [Publishing internal artifacts] Publishing 1 file using [WebPublisher]
+[00:35:16] :	 [Publishing internal artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]
+[00:35:17]i:	 [Publishing internal artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[00:35:17] : Publishing internal artifacts
+[00:35:17] : Build finished
