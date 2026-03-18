@@ -1,0 +1,307 @@
+Build 'netology / example-teamcity-build' #10
+Triggered 2026-03-17 13:35:14 by 'admin'
+Started 2026-03-17 13:35:16 on agent 'teamcity-agent'
+Finished 2026-03-17 13:35:27 with status FAILURE 'Compilation error: Compiler (new)'
+VCS revisions: 'Netology_HttpsGithubComVegorshkovExampleTeamcity' (Git, instance id 2): '5b054b02fdde8ce009049f2dbf669a4eeae6985c' (branch: 'refs/heads/master')
+TeamCity URL http://62.84.118.135:8111/buildConfiguration/Netology_ExampleTeamcityBuild/203 
+TeamCity server version is 2025.11.3 (build 208117), server timezone: GMT (UTC)
+Log entries are grouped by flowIds, so they might not be fully ordered by timestamps
+
+[13:35:14]E: bt1 (13s)
+[13:35:14]i: TeamCity server version is 2025.11.3 (build 208117)
+[13:35:14] : Finalize build settings
+[13:35:14] : The build is removed from the queue to be prepared for the start
+[13:35:14] : Collecting changes in 1 VCS root (2s)
+[13:35:14] :	 [Collecting changes in 1 VCS root] VCS Root details
+[13:35:14] :		 [VCS Root details] "https://github.com/vegorshkov/example-teamcity" {instance id=2, parent internal id=1, parent id=Netology_HttpsGithubComVegorshkovExampleTeamcity, description: "https://github.com/vegorshkov/example-teamcity#refs/heads/master"}
+[13:35:14]i:	 [Collecting changes in 1 VCS root] Loading current repository state for VCS root 'https://github.com/vegorshkov/example-teamcity'
+[13:35:14]i:		 [Loading current repository state for VCS root 'https://github.com/vegorshkov/example-teamcity'] VCS root 'https://github.com/vegorshkov/example-teamcity': git -c core.askpass=/opt/teamcity/temp/pass3591748975576368000 -c credential.helper= -c credential.helper=/opt/teamcity/temp/credHelper17074075790188161900.sh ls-remote origin
+[13:35:14]i:	 [Collecting changes in 1 VCS root] Detecting changes in VCS root 'https://github.com/vegorshkov/example-teamcity' (used in 'example-teamcity-build')
+[13:35:14]i:	 [Collecting changes in 1 VCS root] Will collect changes for 'https://github.com/vegorshkov/example-teamcity' starting from revision 6fc291acc02e94372f33f977c19604a9eb0d52bc
+[13:35:14]i:	 [Collecting changes in 1 VCS root] VCS revisions for 'https://github.com/vegorshkov/example-teamcity' - 6fc291acc02e94372f33f977c19604a9eb0d52bc..5b054b02fdde8ce009049f2dbf669a4eeae6985c
+[13:35:14]i:	 [Collecting changes in 1 VCS root] Processing combined checkout rule for 'https://github.com/vegorshkov/example-teamcity' 
+[13:35:14]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': git -c core.askpass=/opt/teamcity/temp/pass16283075556666474680 -c credential.helper= -c credential.helper=/opt/teamcity/temp/credHelper2962773737897540411.sh ls-remote origin
+[13:35:15]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': git -c core.askpass=/opt/teamcity/temp/pass4784504100720258114 -c credential.helper= -c credential.helper=/opt/teamcity/temp/credHelper6242959726124549123.sh remote prune origin
+[13:35:15]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': git -c core.askpass=/opt/teamcity/temp/pass4262167287994543207 -c credential.helper= -c credential.helper=/opt/teamcity/temp/credHelper3025889012111921383.sh fetch --progress --no-tags --recurse-submodules=no https://vegorshkov@github.com/vegorshkov/example-teamcity +refs/heads/master:refs/heads/master
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Enumerating objects: 39, done.        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:   3% (1/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:   6% (2/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  10% (3/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  13% (4/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  17% (5/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  20% (6/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  24% (7/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  27% (8/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  31% (9/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  34% (10/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  37% (11/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  41% (12/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  44% (13/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  48% (14/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  51% (15/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  55% (16/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  58% (17/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  62% (18/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  65% (19/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  68% (20/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  72% (21/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  75% (22/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  79% (23/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  82% (24/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  86% (25/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  89% (26/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  93% (27/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects:  96% (28/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects: 100% (29/29)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Counting objects: 100% (29/29), done.        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Compressing objects:  14% (1/7)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Compressing objects:  28% (2/7)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Compressing objects:  42% (3/7)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Compressing objects:  57% (4/7)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Compressing objects:  71% (5/7)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Compressing objects:  85% (6/7)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Compressing objects: 100% (7/7)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Compressing objects: 100% (7/7), done.        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': remote: Total 17 (delta 4), reused 17 (delta 4), pack-reused 0 (from 0)        
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Receiving objects:   5% (1/17)
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Receiving objects:  11% (2/17)
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Receiving objects:  17% (3/17)
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Receiving objects:  23% (4/17)
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Receiving objects:  29% (5/17)
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Receiving objects:  35% (6/17)
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Receiving objects:  41% (7/17)
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Receiving objects:  47% (8/17)
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Receiving objects:  52% (9/17)
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Receiving objects:  58% (10/17)
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Receiving objects:  64% (11/17)
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Receiving objects:  70% (12/17)
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Receiving objects:  76% (13/17)
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Receiving objects:  82% (14/17)
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Receiving objects:  88% (15/17)
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Receiving objects:  94% (16/17)
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Receiving objects: 100% (17/17)
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Receiving objects: 100% (17/17), 2.06 KiB | 2.06 MiB/s, done.
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Resolving deltas:   0% (0/4)
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Resolving deltas:  25% (1/4)
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Resolving deltas:  50% (2/4)
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Resolving deltas:  75% (3/4)
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Resolving deltas: 100% (4/4)
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': Resolving deltas: 100% (4/4), completed with 3 local objects.
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity': From https://github.com/vegorshkov/example-teamcity
+[13:35:16]i:	 [Collecting changes in 1 VCS root] VCS root 'https://github.com/vegorshkov/example-teamcity':    6fc291a..5b054b0  master     -> master
+[13:35:16]i:	 [Collecting changes in 1 VCS root] Done collecting changes for 'https://github.com/vegorshkov/example-teamcity': 3 changes collected 3 changes persisted, total time: 1s,932ms, persisting time: 9ms
+[13:35:16] : Compute revision for 'https://github.com/vegorshkov/example-teamcity'
+[13:35:16] :	 [Compute revision for 'https://github.com/vegorshkov/example-teamcity'] Upper limit revision: 5b054b02fdde8ce009049f2dbf669a4eeae6985c
+[13:35:16]i:	 [Compute revision for 'https://github.com/vegorshkov/example-teamcity'] MaxModId = 6
+[13:35:16] :	 [Compute revision for 'https://github.com/vegorshkov/example-teamcity'] Computed revision: 5b054b02fdde8ce009049f2dbf669a4eeae6985c
+[13:35:16] : Starting the build on the agent "teamcity-agent"
+[13:35:16]i: Agent time zone: Etc/UTC
+[13:35:16]i: Agent is running under JRE: 1.8.0_482-8u482-ga~us1-0ubuntu1~22.04-b08
+[13:35:16] : Updating tools for build
+[13:35:16] :	 [Updating tools for build] Found 1 tool used by the build: maven3_9
+[13:35:16] :	 [Updating tools for build] All used tools are up-to-date
+[13:35:16] : Clearing temporary directory: /opt/teamcity-agent/temp/buildTmp
+[13:35:16]i: Preparing performance monitoring data directory: /opt/teamcity-agent/system/perfmon
+[13:35:16]i: Performance monitor is using command line: [perl, /opt/teamcity-agent/system/perfmon/scripts/vmstatlinux.pl, /opt/teamcity-agent/system/perfmon/temp/203/perfmon.csv, 1000]
+[13:35:16]i: Starting performance monitoring process
+[13:35:16]i: Performance monitoring process started
+[13:35:16] : Publishing internal artifacts
+[13:35:16] :	 [Publishing internal artifacts] Publishing 1 file using [WebPublisher]
+[13:35:16] :	 [Publishing internal artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]
+[13:35:16]i:	 [Publishing internal artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[13:35:17] : Using vcs information from agent file: 5871d05f33387ade.xml
+[13:35:17] : Checkout directory: /opt/teamcity-agent/work/5871d05f33387ade
+[13:35:17] : Updating sources: auto checkout (on agent) (1s)
+[13:35:17] :	 [Updating sources] Will use agent side checkout
+[13:35:17] :	 [Updating sources] VCS Root: https://github.com/vegorshkov/example-teamcity (1s)
+[13:35:17] :		 [VCS Root: https://github.com/vegorshkov/example-teamcity] revision: 5b054b02fdde8ce009049f2dbf669a4eeae6985c
+[13:35:17]i:		 [VCS Root: https://github.com/vegorshkov/example-teamcity] Mirrors automatically enabled
+[13:35:17] :		 [VCS Root: https://github.com/vegorshkov/example-teamcity] Git version: 2.34.1.0
+[13:35:17] :		 [VCS Root: https://github.com/vegorshkov/example-teamcity] Update git mirror (/opt/teamcity-agent/system/git/git-60F1052E.git) (1s)
+[13:35:17] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-60F1052E.git)] /usr/bin/git config http.sslCAInfo
+[13:35:17] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-60F1052E.git)] /usr/bin/git show-ref
+[13:35:18] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-60F1052E.git)] /usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass8925538522307711954 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper7728771540190930448.sh ls-remote origin
+[13:35:18] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-60F1052E.git)] /usr/bin/git show-ref refs/heads/master
+[13:35:18] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-60F1052E.git)] /usr/bin/git log -n1 --pretty=format:%H%x20%s 5b054b02fdde8ce009049f2dbf669a4eeae6985c --
+[13:35:18]i:			 [Update git mirror (/opt/teamcity-agent/system/git/git-60F1052E.git)] fatal: bad object 5b054b02fdde8ce009049f2dbf669a4eeae6985c
+[13:35:18] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-60F1052E.git)] 'git fetch' required: commit '5b054b02fdde8ce009049f2dbf669a4eeae6985c' is not found in the local repository clone.
+[13:35:18] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-60F1052E.git)] /usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Enumerating objects: 39, done.        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:   3% (1/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:   6% (2/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  10% (3/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  13% (4/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  17% (5/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  20% (6/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  24% (7/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  27% (8/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  31% (9/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  34% (10/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  37% (11/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  41% (12/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  44% (13/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  48% (14/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  51% (15/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  55% (16/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  58% (17/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  62% (18/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  65% (19/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  68% (20/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  72% (21/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  75% (22/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  79% (23/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  82% (24/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  86% (25/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  89% (26/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  93% (27/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  96% (28/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects: 100% (29/29)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects: 100% (29/29), done.        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Compressing objects:  14% (1/7)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Compressing objects:  28% (2/7)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Compressing objects:  42% (3/7)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Compressing objects:  57% (4/7)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Compressing objects:  71% (5/7)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Compressing objects:  85% (6/7)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Compressing objects: 100% (7/7)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Compressing objects: 100% (7/7), done.        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Total 17 (delta 4), reused 17 (delta 4), pack-reused 0 (from 0)        
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] From https://github.com/vegorshkov/example-teamcity
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master]    6fc291a..5b054b0  master     -> master
+[13:35:19]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass6575653399463530381 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper4286405921518824348.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master]    6fc291a..5b054b0  master     -> origin/master
+[13:35:19] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-60F1052E.git)] /usr/bin/git log -n1 --pretty=format:%H%x20%s 5b054b02fdde8ce009049f2dbf669a4eeae6985c --
+[13:35:19] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-60F1052E.git)] /usr/bin/git pack-refs --all
+[13:35:19] :		 [VCS Root: https://github.com/vegorshkov/example-teamcity] Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)
+[13:35:19] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git rev-parse --is-shallow-repository
+[13:35:19] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git config lfs.storage /opt/teamcity-agent/system/git/git-60F1052E.git/lfs
+[13:35:19] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git config core.sparseCheckout true
+[13:35:19] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git config http.sslCAInfo
+[13:35:19] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git show-ref
+[13:35:19] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git show-ref refs/remotes/origin/master
+[13:35:19] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git log -n1 --pretty=format:%H%x20%s 5b054b02fdde8ce009049f2dbf669a4eeae6985c --
+[13:35:19] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] No 'git fetch' required: commit '5b054b02fdde8ce009049f2dbf669a4eeae6985c' is in the local repository clone pointed by 'refs/remotes/origin/master'.
+[13:35:19] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git branch
+[13:35:19] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass2159498188435207192 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper7950379713216108949.sh reset --hard 5b054b02fdde8ce009049f2dbf669a4eeae6985c
+[13:35:19] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git branch --set-upstream-to=refs/remotes/origin/master
+[13:35:19] : Build preparation done
+[13:35:19]W: Step 1/2: Maven Test (не-master ветки) (Maven)
+[13:35:19]W:	 [Step 1/2] Build step Maven Test (не-master ветки) (Maven) is skipped because of unfulfilled condition: "vcsroot.branch does not equal refs/heads/master"
+[13:35:19]E: Step 2/2: Maven Deploy for master (Maven) (4s)
+[13:35:19]i:	 [Step 2/2] Build step condition "vcsroot.branch equals refs/heads/master" is satisfied
+[13:35:19] :	 [Step 2/2] Using predefined Maven user settings: settings.xml
+[13:35:19] :	 [Step 2/2] Using predefined Maven user settings: settings.xml
+[13:35:19] :	 [Step 2/2] Initial M2_HOME not set
+[13:35:19] :	 [Step 2/2] Current M2_HOME = /opt/teamcity-agent/tools/maven3_9
+[13:35:19] :	 [Step 2/2] PATH = /opt/teamcity-agent/tools/maven3_9/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+[13:35:19] :	 [Step 2/2] Using watcher: /opt/teamcity-agent/plugins/mavenPlugin/maven-watcher-jdk17/maven-watcher-agent.jar
+[13:35:19] :	 [Step 2/2] Using agent local repository at /opt/teamcity-agent/system/jetbrains.maven.runner/maven.repo.local
+[13:35:19] :	 [Step 2/2] *** Start reading the project structure ***
+[13:35:19]i:	 [Step 2/2] Initial MAVEN_OPTS not set
+[13:35:19]i:	 [Step 2/2] Current MAVEN_OPTS not set
+[13:35:21]i:	 [Step 2/2] [INFO] Scanning for projects...
+[13:35:21]i:	 [Step 2/2] [INFO] 
+[13:35:21]i:	 [Step 2/2] [INFO] -----------------------< org.netology:plaindoll >-----------------------
+[13:35:21]i:	 [Step 2/2] [INFO] Building plaindoll 0.0.2
+[13:35:21]i:	 [Step 2/2] [INFO]   from info.1219616683910270787.pom.xml
+[13:35:21]i:	 [Step 2/2] [INFO] --------------------------------[ jar ]---------------------------------
+[13:35:21]i:	 [Step 2/2] [INFO] 
+[13:35:21]i:	 [Step 2/2] [INFO] --- info3:1.4.8:info (default-cli) @ plaindoll ---
+[13:35:21]i:	 [Step 2/2] [INFO] ------------------------------------------------------------------------
+[13:35:21]i:	 [Step 2/2] [INFO] BUILD SUCCESS
+[13:35:21]i:	 [Step 2/2] [INFO] ------------------------------------------------------------------------
+[13:35:21]i:	 [Step 2/2] [INFO] Total time:  0.338 s
+[13:35:21]i:	 [Step 2/2] [INFO] Finished at: 2026-03-17T13:35:21Z
+[13:35:21]i:	 [Step 2/2] [INFO] ------------------------------------------------------------------------
+[13:35:21]i:	 [Step 2/2] Process exited with code 0
+[13:35:21] :	 [Step 2/2] Initial MAVEN_OPTS not set
+[13:35:21] :	 [Step 2/2] Current MAVEN_OPTS not set
+[13:35:21] :	 [Step 2/2] Starting: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -Dagent.home.dir=/opt/teamcity-agent -Dagent.name=teamcity-agent -Dagent.ownPort=9091 -Dagent.work.dir=/opt/teamcity-agent/work -Dbuild.number=10 -Dbuild.vcs.number=5b054b02fdde8ce009049f2dbf669a4eeae6985c -Dbuild.vcs.number.1=5b054b02fdde8ce009049f2dbf669a4eeae6985c -Dbuild.vcs.number.Netology_HttpsGithubComVegorshkovExampleTeamcity=5b054b02fdde8ce009049f2dbf669a4eeae6985c -Dclassworlds.conf=/opt/teamcity-agent/temp/buildTmp/teamcity.m2.conf -Dcom.jetbrains.maven.watcher.report.file=/opt/teamcity-agent/temp/buildTmp/maven-build-info.xml -Djava.io.tmpdir=/opt/teamcity-agent/temp/buildTmp -Dmaven.home=/opt/teamcity-agent/tools/maven3_9 -Dmaven.multiModuleProjectDirectory=/opt/teamcity-agent/work/5871d05f33387ade -Dteamcity.agent.cpuBenchmark=466 -Dteamcity.auth.password=******* -Dteamcity.auth.userId=TeamCityBuildId=203 -Dteamcity.build.changedFiles.file=/opt/teamcity-agent/temp/buildTmp/teamcity.changedFiles.txt -Dteamcity.build.checkoutDir=/opt/teamcity-agent/work/5871d05f33387ade -Dteamcity.build.id=203 -Dteamcity.build.properties.file=/opt/teamcity-agent/temp/buildTmp/teamcity.build.parameters -Dteamcity.build.properties.file.checksum=/opt/teamcity-agent/temp/buildTmp/teamcity.build.parameters.checksum -Dteamcity.build.tempDir=/opt/teamcity-agent/temp/buildTmp -Dteamcity.build.workingDir=/opt/teamcity-agent/work/5871d05f33387ade -Dteamcity.buildConfName=example-teamcity-build -Dteamcity.buildType.id=Netology_ExampleTeamcityBuild -Dteamcity.configuration.properties.file=/opt/teamcity-agent/temp/buildTmp/teamcity.config.parameters -Dteamcity.maven.userSettings.path=/opt/teamcity-agent/temp/buildTmp/maven_settings_3963255587876517290.xml -Dteamcity.maven.watcher.home=/opt/teamcity-agent/plugins/mavenPlugin/maven-watcher-jdk17 -Dteamcity.projectName=netology -Dteamcity.runner.properties.file=/opt/teamcity-agent/temp/buildTmp/teamcity.runner.parameters -Dteamcity.tests.recentlyFailedTests.file=/opt/teamcity-agent/temp/buildTmp/teamcity.testsToRunFirst.txt -Dteamcity.version=2025.11.3 (build 208117) -Dmaven.repo.local=/opt/teamcity-agent/system/jetbrains.maven.runner/maven.repo.local -classpath /opt/teamcity-agent/tools/maven3_9/boot/plexus-classworlds-2.7.0.jar: org.codehaus.plexus.classworlds.launcher.Launcher -f /opt/teamcity-agent/work/5871d05f33387ade/pom.xml -B -s /opt/teamcity-agent/temp/buildTmp/maven_settings_3963255587876517290.xml clean deploy
+[13:35:21] :	 [Step 2/2] in directory: /opt/teamcity-agent/work/5871d05f33387ade
+[13:35:22] :	 [Step 2/2] [INFO] Scanning for projects...
+[13:35:22] :	 [Step 2/2] [INFO] 
+[13:35:22] :	 [Step 2/2] [INFO] -----------------------< org.netology:plaindoll >-----------------------
+[13:35:22] :	 [Step 2/2] [INFO] Building plaindoll 0.0.2
+[13:35:22] :	 [Step 2/2] [INFO]   from pom.xml
+[13:35:22] :	 [Step 2/2] [INFO] --------------------------------[ jar ]---------------------------------
+[13:35:22] :	 [Step 2/2] [Maven Watcher] project started: org.netology:plaindoll:jar:0.0.2
+[13:35:22] :	 [Step 2/2] org.netology:plaindoll
+[13:35:22]i:		 [org.netology:plaindoll] ##teamcity[importData tc:tags='tc:internal' type='surefire' path='/opt/teamcity-agent/work/5871d05f33387ade/target/failsafe-reports/TEST-*.xml' whenNoDataPublished='nothing' logAsInternal='true' rerunFailingTestsEnabled='false']
+[13:35:22]i:		 [org.netology:plaindoll] ##teamcity[importData tc:tags='tc:internal' type='surefire' path='/opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports/TEST-*.xml' whenNoDataPublished='nothing' logAsInternal='true' rerunFailingTestsEnabled='false']
+[13:35:22] :	 [Step 2/2] Importing data from '/opt/teamcity-agent/work/5871d05f33387ade/target/failsafe-reports/TEST-*.xml' with 'surefire' processor
+[13:35:22] :	 [Step 2/2] Importing data from '/opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports/TEST-*.xml' with 'surefire' processor
+[13:35:22] :	 [Step 2/2] [Maven Watcher] 
+[13:35:22]i:	 [Step 2/2] ##teamcity[projectStarted tc:tags='tc:internal' projectId='org.netology:plaindoll:jar:0.0.2' groupId='org.netology' artifactId='plaindoll' testReportsDir0='/opt/teamcity-agent/work/5871d05f33387ade/target/failsafe-reports' testReportsDir1='/opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports']
+[13:35:22] :	 [Step 2/2] Surefire report watcher
+[13:35:22] :		 [Surefire report watcher] Watching paths:
+[13:35:22] :		 [Surefire report watcher] /opt/teamcity-agent/work/5871d05f33387ade/target/failsafe-reports/TEST-*.xml
+[13:35:22] :	 [Step 2/2] Surefire report watcher
+[13:35:22] :		 [Surefire report watcher] Watching paths:
+[13:35:22] :		 [Surefire report watcher] /opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports/TEST-*.xml
+[13:35:23] :	 [Step 2/2] [INFO] 
+[13:35:23] :	 [Step 2/2] [INFO] --- clean:3.2.0:clean (default-clean) @ plaindoll ---
+[13:35:23] :	 [Step 2/2] [INFO] Deleting /opt/teamcity-agent/work/5871d05f33387ade/target
+[13:35:23] :	 [Step 2/2] [INFO] 
+[13:35:23] :	 [Step 2/2] [INFO] --- resources:3.3.1:resources (default-resources) @ plaindoll ---
+[13:35:23]W:	 [Step 2/2] [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[13:35:23] :	 [Step 2/2] [INFO] skip non existing resourceDirectory /opt/teamcity-agent/work/5871d05f33387ade/src/main/resources
+[13:35:23] :	 [Step 2/2] [INFO] 
+[13:35:23] :	 [Step 2/2] [INFO] --- compiler:3.11.0:compile (default-compile) @ plaindoll ---
+[13:35:23] :	 [Step 2/2] [INFO] Changes detected - recompiling the module! :source
+[13:35:23]W:	 [Step 2/2] [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[13:35:23] :	 [Step 2/2] [INFO] Compiling 2 source files with javac [debug target 1.8] to target/classes
+[13:35:23] :	 [Step 2/2] [INFO] -------------------------------------------------------------
+[13:35:23]W:	 [Step 2/2] [ERROR] COMPILATION ERROR : 
+[13:35:23] :	 [Step 2/2] [INFO] -------------------------------------------------------------
+[13:35:23]W:	 [Step 2/2] [ERROR] /opt/teamcity-agent/work/5871d05f33387ade/src/main/java/plaindoll/Welcomer.java:[18,23] method saySome() is already defined in class plaindoll.Welcomer
+[13:35:23] :	 [Step 2/2] [INFO] 1 error
+[13:35:23] :	 [Step 2/2] [INFO] -------------------------------------------------------------
+[13:35:23] :	 [Step 2/2] [Maven Watcher] 
+[13:35:23]E:	 [Step 2/2] Compiler
+[13:35:23] :		 [Compiler] [Maven Watcher] 
+[13:35:23]E:		 [Compiler] /opt/teamcity-agent/work/5871d05f33387ade/src/main/java/plaindoll/Welcomer.java:[18,23] method saySome() is already defined in class plaindoll.Welcomer
+            		 
+[13:35:23] :		 [Compiler] [Maven Watcher] 
+[13:35:23] :	 [Step 2/2] [Maven Watcher] 
+[13:35:23]i:	 [Step 2/2] ##teamcity[projectFinished tc:tags='tc:internal' projectId='org.netology:plaindoll:jar:0.0.2']
+[13:35:23] :	 [Step 2/2] [INFO] ------------------------------------------------------------------------
+[13:35:23] :	 [Step 2/2] [INFO] BUILD FAILURE
+[13:35:23] :	 [Step 2/2] [INFO] ------------------------------------------------------------------------
+[13:35:23] :	 [Step 2/2] [INFO] Total time:  1.094 s
+[13:35:23] :	 [Step 2/2] [INFO] Finished at: 2026-03-17T13:35:23Z
+[13:35:23] :	 [Step 2/2] [INFO] ------------------------------------------------------------------------
+[13:35:23] :	 [Step 2/2] [Maven Watcher] building report document...
+[13:35:23] :	 [Step 2/2] [Maven Watcher] building report document done
+[13:35:23] :	 [Step 2/2] [Maven Watcher] writing report to /opt/teamcity-agent/temp/buildTmp/maven-build-info.xml
+[13:35:23] :	 [Step 2/2] [Maven Watcher] done writing report
+[13:35:23]W:	 [Step 2/2] [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project plaindoll: Compilation failure
+[13:35:23]W:	 [Step 2/2] [ERROR] /opt/teamcity-agent/work/5871d05f33387ade/src/main/java/plaindoll/Welcomer.java:[18,23] method saySome() is already defined in class plaindoll.Welcomer
+[13:35:23]W:	 [Step 2/2] [ERROR] -> [Help 1]
+[13:35:23]W:	 [Step 2/2] [ERROR] 
+[13:35:23]W:	 [Step 2/2] [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[13:35:23]W:	 [Step 2/2] [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[13:35:23]W:	 [Step 2/2] [ERROR] 
+[13:35:23]W:	 [Step 2/2] [ERROR] For more information about the errors and possible solutions, please read the following articles:
+[13:35:23]W:	 [Step 2/2] [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[13:35:24]W:	 [Step 2/2] Process exited with code 1
+[13:35:24] :	 [Step 2/2] Publishing artifacts
+[13:35:24] :		 [Publishing artifacts] Collecting files to publish: [/opt/teamcity-agent/temp/buildTmp/.tc-maven-bi/maven-build-info.xml.gz => .teamcity]
+[13:35:24] :		 [Publishing artifacts] Publishing 1 file using [WebPublisher]: /opt/teamcity-agent/temp/buildTmp/.tc-maven-bi/maven-build-info.xml.gz => .teamcity
+[13:35:24] :		 [Publishing artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]: /opt/teamcity-agent/temp/buildTmp/.tc-maven-bi/maven-build-info.xml.gz => .teamcity
+[13:35:24]i:		 [Publishing artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[13:35:24]E:	 [Step 2/2] Process exited with code 1 (Step: Maven Deploy for master (Maven))
+[13:35:24] :	 [Step 2/2] Waiting for 2 service processes to complete
+[13:35:24]E:	 [Step 2/2] Step Maven Deploy for master (Maven) failed
+[13:35:24]i: Stopping performance monitoring process
+[13:35:26]i: Performance monitoring process stopped
+[13:35:26]i: Publishing performance monitoring build stages data
+[13:35:26] : Publishing artifacts
+[13:35:26] :	 [Publishing artifacts] Collecting files to publish: [/opt/teamcity-agent/system/perfmon/temp/203/perfmon.csv=>.teamcity/perfmon/, /opt/teamcity-agent/temp/agentTmp/build_stages.txt=>.teamcity/perfmon/]
+[13:35:26] :	 [Publishing artifacts] Publishing 2 files using [WebPublisher]: /opt/teamcity-agent/system/perfmon/temp/203/perfmon.csv, /opt/teamcity-agent/temp/agentTmp/build_stages.txt => .teamcity/perfmon
+[13:35:26] :	 [Publishing artifacts] Publishing 2 files using [ArtifactsCachePublisherImpl]: /opt/teamcity-agent/system/perfmon/temp/203/perfmon.csv, /opt/teamcity-agent/temp/agentTmp/build_stages.txt => .teamcity/perfmon
+[13:35:26]i:	 [Publishing artifacts] Will publish 2 artifact(s) to TeamCity node with id MAIN_SERVER
+[13:35:26] : Publishing internal artifacts
+[13:35:26] :	 [Publishing internal artifacts] Publishing 1 file using [WebPublisher]
+[13:35:26] :	 [Publishing internal artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]
+[13:35:26]i:	 [Publishing internal artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[13:35:27] : Publishing internal artifacts
+[13:35:27] : Build finished

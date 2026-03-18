@@ -1,0 +1,239 @@
+Build 'netology / example-teamcity-build' #13
+Triggered 2026-03-17 15:05:30 by 'admin'
+Started 2026-03-17 15:05:36 on agent 'teamcity-agent'
+Finished 2026-03-17 15:05:46 with status NORMAL 'Tests passed: 6'
+VCS revisions: 'Netology_HttpsGithubComVegorshkovExampleTeamcity' (Git, instance id 2): '8d89e3b727edc117ae208526614b7d27ff0c4f0e' (branch: 'refs/heads/master')
+TeamCity URL http://62.84.118.135:8111/buildConfiguration/Netology_ExampleTeamcityBuild/206 
+TeamCity server version is 2025.11.3 (build 208117), server timezone: GMT (UTC)
+Log entries are grouped by flowIds, so they might not be fully ordered by timestamps
+
+[15:05:30]W: bt1 (16s)
+[15:05:30]i: TeamCity server version is 2025.11.3 (build 208117)
+[15:05:30] : Finalize build settings
+[15:05:35] : The build is removed from the queue to be prepared for the start
+[15:05:35] : Collecting changes in 1 VCS root
+[15:05:35] :	 [Collecting changes in 1 VCS root] VCS Root details
+[15:05:35] :		 [VCS Root details] "https://github.com/vegorshkov/example-teamcity" {instance id=2, parent internal id=1, parent id=Netology_HttpsGithubComVegorshkovExampleTeamcity, description: "https://github.com/vegorshkov/example-teamcity#refs/heads/master"}
+[15:05:35]i:	 [Collecting changes in 1 VCS root] Loading current repository state for VCS root 'https://github.com/vegorshkov/example-teamcity'
+[15:05:35]i:		 [Loading current repository state for VCS root 'https://github.com/vegorshkov/example-teamcity'] VCS root 'https://github.com/vegorshkov/example-teamcity': git -c core.askpass=/opt/teamcity/temp/pass7083414739732362608 -c credential.helper= -c credential.helper=/opt/teamcity/temp/credHelper14810109896531990163.sh ls-remote origin
+[15:05:36]i:	 [Collecting changes in 1 VCS root] Detecting changes in VCS root 'https://github.com/vegorshkov/example-teamcity' (used in 'example-teamcity-build')
+[15:05:36]i:	 [Collecting changes in 1 VCS root] Will collect changes for 'https://github.com/vegorshkov/example-teamcity' starting from revision 8d89e3b727edc117ae208526614b7d27ff0c4f0e
+[15:05:36] : Compute revision for 'https://github.com/vegorshkov/example-teamcity'
+[15:05:36] :	 [Compute revision for 'https://github.com/vegorshkov/example-teamcity'] Upper limit revision: 8d89e3b727edc117ae208526614b7d27ff0c4f0e
+[15:05:36]i:	 [Compute revision for 'https://github.com/vegorshkov/example-teamcity'] MaxModId = 9
+[15:05:36] :	 [Compute revision for 'https://github.com/vegorshkov/example-teamcity'] Computed revision: 8d89e3b727edc117ae208526614b7d27ff0c4f0e
+[15:05:36] : Starting the build on the agent "teamcity-agent"
+[15:05:36]i: Agent time zone: Etc/UTC
+[15:05:36]i: Agent is running under JRE: 1.8.0_482-8u482-ga~us1-0ubuntu1~22.04-b08
+[15:05:36] : Updating tools for build
+[15:05:36] :	 [Updating tools for build] Found 1 tool used by the build: maven3_9
+[15:05:36] :	 [Updating tools for build] All used tools are up-to-date
+[15:05:36] : Clearing temporary directory: /opt/teamcity-agent/temp/buildTmp
+[15:05:36]i: Preparing performance monitoring data directory: /opt/teamcity-agent/system/perfmon
+[15:05:36]i: Performance monitor is using command line: [perl, /opt/teamcity-agent/system/perfmon/scripts/vmstatlinux.pl, /opt/teamcity-agent/system/perfmon/temp/206/perfmon.csv, 1000]
+[15:05:36]i: Starting performance monitoring process
+[15:05:36]i: Performance monitoring process started
+[15:05:36] : Publishing internal artifacts
+[15:05:36] :	 [Publishing internal artifacts] Publishing 1 file using [WebPublisher]
+[15:05:36] :	 [Publishing internal artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]
+[15:05:36]i:	 [Publishing internal artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[15:05:36] : Using vcs information from agent file: 5871d05f33387ade.xml
+[15:05:36] : Checkout directory: /opt/teamcity-agent/work/5871d05f33387ade
+[15:05:36] : Updating sources: auto checkout (on agent) (1s)
+[15:05:36] :	 [Updating sources] Will use agent side checkout
+[15:05:36] :	 [Updating sources] VCS Root: https://github.com/vegorshkov/example-teamcity (1s)
+[15:05:36] :		 [VCS Root: https://github.com/vegorshkov/example-teamcity] revision: 8d89e3b727edc117ae208526614b7d27ff0c4f0e
+[15:05:36]i:		 [VCS Root: https://github.com/vegorshkov/example-teamcity] Mirrors automatically enabled
+[15:05:36] :		 [VCS Root: https://github.com/vegorshkov/example-teamcity] Git version: 2.34.1.0
+[15:05:36] :		 [VCS Root: https://github.com/vegorshkov/example-teamcity] Update git mirror (/opt/teamcity-agent/system/git/git-60F1052E.git) (1s)
+[15:05:36] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-60F1052E.git)] /usr/bin/git config http.sslCAInfo
+[15:05:36] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-60F1052E.git)] /usr/bin/git show-ref
+[15:05:36] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-60F1052E.git)] /usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass4853099970621774464 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper9067681872780544003.sh ls-remote origin
+[15:05:36] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-60F1052E.git)] /usr/bin/git show-ref refs/heads/master
+[15:05:36] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-60F1052E.git)] /usr/bin/git log -n1 --pretty=format:%H%x20%s 8d89e3b727edc117ae208526614b7d27ff0c4f0e --
+[15:05:36]i:			 [Update git mirror (/opt/teamcity-agent/system/git/git-60F1052E.git)] fatal: bad object 8d89e3b727edc117ae208526614b7d27ff0c4f0e
+[15:05:36] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-60F1052E.git)] 'git fetch' required: commit '8d89e3b727edc117ae208526614b7d27ff0c4f0e' is not found in the local repository clone.
+[15:05:36] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-60F1052E.git)] /usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass5555208728330625838 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper2253369758579222570.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master
+[15:05:37]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass5555208728330625838 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper2253369758579222570.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Enumerating objects: 5, done.        
+[15:05:37]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass5555208728330625838 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper2253369758579222570.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  20% (1/5)        
+[15:05:37]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass5555208728330625838 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper2253369758579222570.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  40% (2/5)        
+[15:05:37]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass5555208728330625838 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper2253369758579222570.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  60% (3/5)        
+[15:05:37]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass5555208728330625838 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper2253369758579222570.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects:  80% (4/5)        
+[15:05:37]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass5555208728330625838 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper2253369758579222570.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects: 100% (5/5)        
+[15:05:37]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass5555208728330625838 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper2253369758579222570.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Counting objects: 100% (5/5), done.        
+[15:05:37]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass5555208728330625838 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper2253369758579222570.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Compressing objects: 100% (1/1)        
+[15:05:37]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass5555208728330625838 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper2253369758579222570.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Compressing objects: 100% (1/1), done.        
+[15:05:37]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass5555208728330625838 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper2253369758579222570.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0 (from 0)        
+[15:05:37]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass5555208728330625838 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper2253369758579222570.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master] From https://github.com/vegorshkov/example-teamcity
+[15:05:37]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass5555208728330625838 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper2253369758579222570.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master]    33a3862..8d89e3b  master     -> master
+[15:05:37]i:				 [/usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass5555208728330625838 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper2253369758579222570.sh fetch --progress --recurse-submodules=no origin +refs/heads/master:refs/heads/master]    33a3862..8d89e3b  master     -> origin/master
+[15:05:37] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-60F1052E.git)] /usr/bin/git log -n1 --pretty=format:%H%x20%s 8d89e3b727edc117ae208526614b7d27ff0c4f0e --
+[15:05:37] :			 [Update git mirror (/opt/teamcity-agent/system/git/git-60F1052E.git)] /usr/bin/git pack-refs --all
+[15:05:37] :		 [VCS Root: https://github.com/vegorshkov/example-teamcity] Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)
+[15:05:37] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git rev-parse --is-shallow-repository
+[15:05:37] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git config lfs.storage /opt/teamcity-agent/system/git/git-60F1052E.git/lfs
+[15:05:37] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git config core.sparseCheckout true
+[15:05:37] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git config http.sslCAInfo
+[15:05:37] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git show-ref
+[15:05:37] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git show-ref refs/remotes/origin/master
+[15:05:37] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git log -n1 --pretty=format:%H%x20%s 8d89e3b727edc117ae208526614b7d27ff0c4f0e --
+[15:05:37] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] No 'git fetch' required: commit '8d89e3b727edc117ae208526614b7d27ff0c4f0e' is in the local repository clone pointed by 'refs/remotes/origin/master'.
+[15:05:37] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git branch
+[15:05:37] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git -c core.askpass=/opt/teamcity-agent/temp/buildTmp/pass422277542028876055 -c credential.helper= -c credential.helper=/opt/teamcity-agent/temp/buildTmp/credHelper1676713092055329470.sh reset --hard 8d89e3b727edc117ae208526614b7d27ff0c4f0e
+[15:05:37] :			 [Update checkout directory (/opt/teamcity-agent/work/5871d05f33387ade)] /usr/bin/git branch --set-upstream-to=refs/remotes/origin/master
+[15:05:38] : Build preparation done
+[15:05:38]W: Step 1/2: Maven Test (не-master ветки) (Maven)
+[15:05:38]W:	 [Step 1/2] Build step Maven Test (не-master ветки) (Maven) is skipped because of unfulfilled condition: "vcsroot.branch does not equal refs/heads/master"
+[15:05:38]W: Step 2/2: Maven Deploy for master (Maven) (7s)
+[15:05:38]i:	 [Step 2/2] Build step condition "vcsroot.branch equals refs/heads/master" is satisfied
+[15:05:38] :	 [Step 2/2] Using predefined Maven user settings: settings.xml
+[15:05:38] :	 [Step 2/2] Using predefined Maven user settings: settings.xml
+[15:05:38] :	 [Step 2/2] Initial M2_HOME not set
+[15:05:38] :	 [Step 2/2] Current M2_HOME = /opt/teamcity-agent/tools/maven3_9
+[15:05:38] :	 [Step 2/2] PATH = /opt/teamcity-agent/tools/maven3_9/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+[15:05:38] :	 [Step 2/2] Using watcher: /opt/teamcity-agent/plugins/mavenPlugin/maven-watcher-jdk17/maven-watcher-agent.jar
+[15:05:38] :	 [Step 2/2] Using agent local repository at /opt/teamcity-agent/system/jetbrains.maven.runner/maven.repo.local
+[15:05:38] :	 [Step 2/2] *** Start reading the project structure ***
+[15:05:38]i:	 [Step 2/2] Initial MAVEN_OPTS not set
+[15:05:38]i:	 [Step 2/2] Current MAVEN_OPTS not set
+[15:05:39]i:	 [Step 2/2] [INFO] Scanning for projects...
+[15:05:39]i:	 [Step 2/2] [INFO] 
+[15:05:39]i:	 [Step 2/2] [INFO] -----------------------< org.netology:plaindoll >-----------------------
+[15:05:39]i:	 [Step 2/2] [INFO] Building plaindoll 0.0.3
+[15:05:39]i:	 [Step 2/2] [INFO]   from info.1950973988900889965.pom.xml
+[15:05:39]i:	 [Step 2/2] [INFO] --------------------------------[ jar ]---------------------------------
+[15:05:39]i:	 [Step 2/2] [INFO] 
+[15:05:39]i:	 [Step 2/2] [INFO] --- info3:1.4.8:info (default-cli) @ plaindoll ---
+[15:05:39]i:	 [Step 2/2] [INFO] ------------------------------------------------------------------------
+[15:05:39]i:	 [Step 2/2] [INFO] BUILD SUCCESS
+[15:05:39]i:	 [Step 2/2] [INFO] ------------------------------------------------------------------------
+[15:05:39]i:	 [Step 2/2] [INFO] Total time:  0.447 s
+[15:05:39]i:	 [Step 2/2] [INFO] Finished at: 2026-03-17T15:05:39Z
+[15:05:39]i:	 [Step 2/2] [INFO] ------------------------------------------------------------------------
+[15:05:39]i:	 [Step 2/2] Process exited with code 0
+[15:05:39] :	 [Step 2/2] Initial MAVEN_OPTS not set
+[15:05:39] :	 [Step 2/2] Current MAVEN_OPTS not set
+[15:05:39] :	 [Step 2/2] Starting: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -Dagent.home.dir=/opt/teamcity-agent -Dagent.name=teamcity-agent -Dagent.ownPort=9091 -Dagent.work.dir=/opt/teamcity-agent/work -Dbuild.number=13 -Dbuild.vcs.number=8d89e3b727edc117ae208526614b7d27ff0c4f0e -Dbuild.vcs.number.1=8d89e3b727edc117ae208526614b7d27ff0c4f0e -Dbuild.vcs.number.Netology_HttpsGithubComVegorshkovExampleTeamcity=8d89e3b727edc117ae208526614b7d27ff0c4f0e -Dclassworlds.conf=/opt/teamcity-agent/temp/buildTmp/teamcity.m2.conf -Dcom.jetbrains.maven.watcher.report.file=/opt/teamcity-agent/temp/buildTmp/maven-build-info.xml -Djava.io.tmpdir=/opt/teamcity-agent/temp/buildTmp -Dmaven.home=/opt/teamcity-agent/tools/maven3_9 -Dmaven.multiModuleProjectDirectory=/opt/teamcity-agent/work/5871d05f33387ade -Dteamcity.agent.cpuBenchmark=466 -Dteamcity.auth.password=******* -Dteamcity.auth.userId=TeamCityBuildId=206 -Dteamcity.build.changedFiles.file=/opt/teamcity-agent/temp/buildTmp/teamcity.changedFiles.txt -Dteamcity.build.checkoutDir=/opt/teamcity-agent/work/5871d05f33387ade -Dteamcity.build.id=206 -Dteamcity.build.properties.file=/opt/teamcity-agent/temp/buildTmp/teamcity.build.parameters -Dteamcity.build.properties.file.checksum=/opt/teamcity-agent/temp/buildTmp/teamcity.build.parameters.checksum -Dteamcity.build.tempDir=/opt/teamcity-agent/temp/buildTmp -Dteamcity.build.workingDir=/opt/teamcity-agent/work/5871d05f33387ade -Dteamcity.buildConfName=example-teamcity-build -Dteamcity.buildType.id=Netology_ExampleTeamcityBuild -Dteamcity.configuration.properties.file=/opt/teamcity-agent/temp/buildTmp/teamcity.config.parameters -Dteamcity.maven.userSettings.path=/opt/teamcity-agent/temp/buildTmp/maven_settings_9008653015267755980.xml -Dteamcity.maven.watcher.home=/opt/teamcity-agent/plugins/mavenPlugin/maven-watcher-jdk17 -Dteamcity.projectName=netology -Dteamcity.runner.properties.file=/opt/teamcity-agent/temp/buildTmp/teamcity.runner.parameters -Dteamcity.tests.recentlyFailedTests.file=/opt/teamcity-agent/temp/buildTmp/teamcity.testsToRunFirst.txt -Dteamcity.version=2025.11.3 (build 208117) -Dmaven.repo.local=/opt/teamcity-agent/system/jetbrains.maven.runner/maven.repo.local -classpath /opt/teamcity-agent/tools/maven3_9/boot/plexus-classworlds-2.7.0.jar: org.codehaus.plexus.classworlds.launcher.Launcher -f /opt/teamcity-agent/work/5871d05f33387ade/pom.xml -B -s /opt/teamcity-agent/temp/buildTmp/maven_settings_9008653015267755980.xml clean deploy
+[15:05:39] :	 [Step 2/2] in directory: /opt/teamcity-agent/work/5871d05f33387ade
+[15:05:41] :	 [Step 2/2] [INFO] Scanning for projects...
+[15:05:41] :	 [Step 2/2] [INFO] 
+[15:05:41] :	 [Step 2/2] [INFO] -----------------------< org.netology:plaindoll >-----------------------
+[15:05:41] :	 [Step 2/2] [INFO] Building plaindoll 0.0.3
+[15:05:41] :	 [Step 2/2] [INFO]   from pom.xml
+[15:05:41] :	 [Step 2/2] [INFO] --------------------------------[ jar ]---------------------------------
+[15:05:41] :	 [Step 2/2] [Maven Watcher] project started: org.netology:plaindoll:jar:0.0.3
+[15:05:41] :	 [Step 2/2] org.netology:plaindoll (3s)
+[15:05:41]i:		 [org.netology:plaindoll] ##teamcity[importData tc:tags='tc:internal' type='surefire' path='/opt/teamcity-agent/work/5871d05f33387ade/target/failsafe-reports/TEST-*.xml' whenNoDataPublished='nothing' logAsInternal='true' rerunFailingTestsEnabled='false']
+[15:05:41]i:		 [org.netology:plaindoll] ##teamcity[importData tc:tags='tc:internal' type='surefire' path='/opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports/TEST-*.xml' whenNoDataPublished='nothing' logAsInternal='true' rerunFailingTestsEnabled='false']
+[15:05:41] :	 [Step 2/2] Importing data from '/opt/teamcity-agent/work/5871d05f33387ade/target/failsafe-reports/TEST-*.xml' with 'surefire' processor
+[15:05:41] :	 [Step 2/2] Importing data from '/opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports/TEST-*.xml' with 'surefire' processor
+[15:05:41] :	 [Step 2/2] [Maven Watcher] 
+[15:05:41]i:	 [Step 2/2] ##teamcity[projectStarted tc:tags='tc:internal' projectId='org.netology:plaindoll:jar:0.0.3' groupId='org.netology' artifactId='plaindoll' testReportsDir0='/opt/teamcity-agent/work/5871d05f33387ade/target/failsafe-reports' testReportsDir1='/opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports']
+[15:05:41] :	 [Step 2/2] Surefire report watcher
+[15:05:41] :		 [Surefire report watcher] Watching paths:
+[15:05:41] :		 [Surefire report watcher] /opt/teamcity-agent/work/5871d05f33387ade/target/failsafe-reports/TEST-*.xml
+[15:05:41] :	 [Step 2/2] Surefire report watcher
+[15:05:41] :		 [Surefire report watcher] Watching paths:
+[15:05:41] :		 [Surefire report watcher] /opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports/TEST-*.xml
+[15:05:41] :	 [Step 2/2] [INFO] 
+[15:05:41] :	 [Step 2/2] [INFO] --- clean:3.2.0:clean (default-clean) @ plaindoll ---
+[15:05:41] :	 [Step 2/2] [INFO] Deleting /opt/teamcity-agent/work/5871d05f33387ade/target
+[15:05:41] :	 [Step 2/2] [INFO] 
+[15:05:41] :	 [Step 2/2] [INFO] --- resources:3.3.1:resources (default-resources) @ plaindoll ---
+[15:05:42]W:	 [Step 2/2] [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[15:05:42] :	 [Step 2/2] [INFO] skip non existing resourceDirectory /opt/teamcity-agent/work/5871d05f33387ade/src/main/resources
+[15:05:42] :	 [Step 2/2] [INFO] 
+[15:05:42] :	 [Step 2/2] [INFO] --- compiler:3.11.0:compile (default-compile) @ plaindoll ---
+[15:05:42] :	 [Step 2/2] [INFO] Changes detected - recompiling the module! :source
+[15:05:42]W:	 [Step 2/2] [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[15:05:42] :	 [Step 2/2] [INFO] Compiling 2 source files with javac [debug target 1.8] to target/classes
+[15:05:42] :	 [Step 2/2] [INFO] 
+[15:05:42] :	 [Step 2/2] [INFO] --- resources:3.3.1:testResources (default-testResources) @ plaindoll ---
+[15:05:42]W:	 [Step 2/2] [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[15:05:42] :	 [Step 2/2] [INFO] skip non existing resourceDirectory /opt/teamcity-agent/work/5871d05f33387ade/src/test/resources
+[15:05:42] :	 [Step 2/2] [INFO] 
+[15:05:42] :	 [Step 2/2] [INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ plaindoll ---
+[15:05:42] :	 [Step 2/2] [INFO] Changes detected - recompiling the module! :dependency
+[15:05:42]W:	 [Step 2/2] [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[15:05:42] :	 [Step 2/2] [INFO] Compiling 1 source file with javac [debug target 1.8] to target/test-classes
+[15:05:42] :	 [Step 2/2] [INFO] 
+[15:05:42] :	 [Step 2/2] [INFO] --- surefire:3.2.2:test (default-test) @ plaindoll ---
+[15:05:42] :	 [Step 2/2] [INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+[15:05:42] :	 [Step 2/2] [INFO] 
+[15:05:42] :	 [Step 2/2] [INFO] -------------------------------------------------------
+[15:05:42] :	 [Step 2/2] [INFO]  T E S T S
+[15:05:42] :	 [Step 2/2] [INFO] -------------------------------------------------------
+[15:05:43] :	 [Step 2/2] [INFO] Running plaindoll.WelcomerTest
+[15:05:43] :	 [Step 2/2] [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.065 s -- in plaindoll.WelcomerTest
+[15:05:43] :	 [Step 2/2] [INFO] 
+[15:05:43] :	 [Step 2/2] [INFO] Results:
+[15:05:43] :	 [Step 2/2] [INFO] 
+[15:05:43] :	 [Step 2/2] [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
+[15:05:43] :	 [Step 2/2] [INFO] 
+[15:05:43] :	 [Step 2/2] [INFO] 
+[15:05:43] :	 [Step 2/2] [INFO] --- jar:3.3.0:jar (default-jar) @ plaindoll ---
+[15:05:43]i:	 [Step 2/2] plaindoll.WelcomerTest
+[15:05:43]i:		 [plaindoll.WelcomerTest] welcomerSaysFarewell
+[15:05:43]i:		 [plaindoll.WelcomerTest] testHunterReplyContainsHunter
+[15:05:43]i:		 [plaindoll.WelcomerTest] welcomerSaysHunter
+[15:05:43]i:		 [plaindoll.WelcomerTest] welcomerSaysSilver
+[15:05:43]i:		 [plaindoll.WelcomerTest] welcomerSaysSomething
+[15:05:43]i:		 [plaindoll.WelcomerTest] welcomerSaysWelcome
+[15:05:43] :	 [Step 2/2] [INFO] Building jar: /opt/teamcity-agent/work/5871d05f33387ade/target/plaindoll-0.0.3.jar
+[15:05:43] :	 [Step 2/2] [INFO] 
+[15:05:43] :	 [Step 2/2] [INFO] --- shade:3.2.4:shade (default) @ plaindoll ---
+[15:05:43] :	 [Step 2/2] [INFO] Replacing original artifact with shaded artifact.
+[15:05:43] :	 [Step 2/2] [INFO] Replacing /opt/teamcity-agent/work/5871d05f33387ade/target/plaindoll-0.0.3.jar with /opt/teamcity-agent/work/5871d05f33387ade/target/plaindoll-0.0.3-shaded.jar
+[15:05:43] :	 [Step 2/2] [INFO] 
+[15:05:43] :	 [Step 2/2] [INFO] --- install:3.1.1:install (default-install) @ plaindoll ---
+[15:05:43] :	 [Step 2/2] [INFO] Installing /opt/teamcity-agent/work/5871d05f33387ade/pom.xml to /opt/teamcity-agent/system/jetbrains.maven.runner/maven.repo.local/org/netology/plaindoll/0.0.3/plaindoll-0.0.3.pom
+[15:05:43] :	 [Step 2/2] [INFO] Installing /opt/teamcity-agent/work/5871d05f33387ade/target/plaindoll-0.0.3.jar to /opt/teamcity-agent/system/jetbrains.maven.runner/maven.repo.local/org/netology/plaindoll/0.0.3/plaindoll-0.0.3.jar
+[15:05:43] :	 [Step 2/2] [INFO] 
+[15:05:43] :	 [Step 2/2] [INFO] --- deploy:3.1.1:deploy (default-deploy) @ plaindoll ---
+[15:05:44] :	 [Step 2/2] [INFO] Uploading to nexus: http://89.169.157.167:8081/repository/maven-releases/org/netology/plaindoll/0.0.3/plaindoll-0.0.3.pom
+[15:05:44] :	 [Step 2/2] [INFO] Uploaded to nexus: http://89.169.157.167:8081/repository/maven-releases/org/netology/plaindoll/0.0.3/plaindoll-0.0.3.pom (1.6 kB at 5.2 kB/s)
+[15:05:44] :	 [Step 2/2] [INFO] Uploading to nexus: http://89.169.157.167:8081/repository/maven-releases/org/netology/plaindoll/0.0.3/plaindoll-0.0.3.jar
+[15:05:44] :	 [Step 2/2] [INFO] Uploaded to nexus: http://89.169.157.167:8081/repository/maven-releases/org/netology/plaindoll/0.0.3/plaindoll-0.0.3.jar (3.2 kB at 28 kB/s)
+[15:05:44] :	 [Step 2/2] [INFO] Downloading from nexus: http://89.169.157.167:8081/repository/maven-releases/org/netology/plaindoll/maven-metadata.xml
+[15:05:44] :	 [Step 2/2] [INFO] Downloaded from nexus: http://89.169.157.167:8081/repository/maven-releases/org/netology/plaindoll/maven-metadata.xml (301 B at 7.0 kB/s)
+[15:05:44] :	 [Step 2/2] [INFO] Uploading to nexus: http://89.169.157.167:8081/repository/maven-releases/org/netology/plaindoll/maven-metadata.xml
+[15:05:44] :	 [Step 2/2] [INFO] Uploaded to nexus: http://89.169.157.167:8081/repository/maven-releases/org/netology/plaindoll/maven-metadata.xml (332 B at 2.3 kB/s)
+[15:05:44] :	 [Step 2/2] [Maven Watcher] 
+[15:05:44]i:	 [Step 2/2] ##teamcity[projectFinished tc:tags='tc:internal' projectId='org.netology:plaindoll:jar:0.0.3']
+[15:05:44] :	 [Step 2/2] [INFO] ------------------------------------------------------------------------
+[15:05:44] :	 [Step 2/2] [INFO] BUILD SUCCESS
+[15:05:44] :	 [Step 2/2] [INFO] ------------------------------------------------------------------------
+[15:05:44] :	 [Step 2/2] [INFO] Total time:  3.547 s
+[15:05:44] :	 [Step 2/2] [INFO] Finished at: 2026-03-17T15:05:44Z
+[15:05:44] :	 [Step 2/2] [INFO] ------------------------------------------------------------------------
+[15:05:44] :	 [Step 2/2] [Maven Watcher] building report document...
+[15:05:44] :	 [Step 2/2] [Maven Watcher] building report document done
+[15:05:44] :	 [Step 2/2] [Maven Watcher] writing report to /opt/teamcity-agent/temp/buildTmp/maven-build-info.xml
+[15:05:44] :	 [Step 2/2] [Maven Watcher] done writing report
+[15:05:44] :	 [Step 2/2] Process exited with code 0
+[15:05:44] :	 [Step 2/2] Publishing artifacts
+[15:05:44] :		 [Publishing artifacts] Collecting files to publish: [/opt/teamcity-agent/temp/buildTmp/.tc-maven-bi/maven-build-info.xml.gz => .teamcity]
+[15:05:44] :		 [Publishing artifacts] Publishing 1 file using [WebPublisher]: /opt/teamcity-agent/temp/buildTmp/.tc-maven-bi/maven-build-info.xml.gz => .teamcity
+[15:05:44] :		 [Publishing artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]: /opt/teamcity-agent/temp/buildTmp/.tc-maven-bi/maven-build-info.xml.gz => .teamcity
+[15:05:44]i:		 [Publishing artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[15:05:45] :	 [Step 2/2] Waiting for 2 service processes to complete
+[15:05:45] :	 [Step 2/2] Surefire report watcher
+[15:05:45] :		 [Surefire report watcher] 1 report found for paths:
+[15:05:45] :		 [Surefire report watcher] /opt/teamcity-agent/work/5871d05f33387ade/target/surefire-reports/TEST-*.xml
+[15:05:45] :		 [Surefire report watcher] Successfully parsed
+[15:05:45] :			 [Successfully parsed] 1 report
+[15:05:45] :			 [Successfully parsed] target/surefire-reports/TEST-plaindoll.WelcomerTest.xml
+[15:05:45]i: Stopping performance monitoring process
+[15:05:46]i: Performance monitoring process stopped
+[15:05:46]i: Publishing performance monitoring build stages data
+[15:05:46] : Publishing artifacts
+[15:05:46] :	 [Publishing artifacts] Collecting files to publish: [/opt/teamcity-agent/system/perfmon/temp/206/perfmon.csv=>.teamcity/perfmon/, /opt/teamcity-agent/temp/agentTmp/build_stages.txt=>.teamcity/perfmon/]
+[15:05:46] :	 [Publishing artifacts] Publishing 2 files using [WebPublisher]: /opt/teamcity-agent/system/perfmon/temp/206/perfmon.csv, /opt/teamcity-agent/temp/agentTmp/build_stages.txt => .teamcity/perfmon
+[15:05:46] :	 [Publishing artifacts] Publishing 2 files using [ArtifactsCachePublisherImpl]: /opt/teamcity-agent/system/perfmon/temp/206/perfmon.csv, /opt/teamcity-agent/temp/agentTmp/build_stages.txt => .teamcity/perfmon
+[15:05:46]i:	 [Publishing artifacts] Will publish 2 artifact(s) to TeamCity node with id MAIN_SERVER
+[15:05:46] : Publishing internal artifacts
+[15:05:46] :	 [Publishing internal artifacts] Publishing 1 file using [WebPublisher]
+[15:05:46] :	 [Publishing internal artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]
+[15:05:46]i:	 [Publishing internal artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[15:05:46] : Publishing internal artifacts
+[15:05:46] : Build finished
