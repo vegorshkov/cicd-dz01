@@ -170,3 +170,61 @@ SUCCESS
 Артефакт добыт =)
 ![alt text](image-56.png)
 
+Шаг 8: Клонируем репозиторий
+![alt text](image-57.png)
+
+![alt text](image-58.png)
+![alt text](image-59.png)
+![alt text](image-60.png)
+![alt text](image-61.png)
+![alt text](image-62.png)
+
+![alt text](image-63.png)
+![alt text](image-64.png)
+
+Шаг 9:  Создадим ветку. "Создайте отдельную ветку feature/add_reply в репозитории."
+![alt text](image-65.png)
+![alt text](image-66.png)
+![alt text](image-67.png)
+
+Теперь запушим "git push origin feature/add_reply", запустим сборку.
+![alt text](image-68.png)
+![alt text](image-69.png)  логи:  [text](netology_example-teamcity-build_8.log)
+Видно что выполнился шаг 1 и 2, требуется только 2, не пройдено условие, поменял.
+![alt text](image-70.png)
+
+Обновил nexus IP.
+![alt text](image-71.png)
+
+Ошибка релиза "400 с текстом "does not allow updating assets" — Nexus не разрешает перезаписывать уже существующий релизный артефакт"
+![alt text](image-72.png)
+![alt text](image-73.png)
+
+![alt text](image-74.png)
+
+Итого:  тесты не запускались, так как ветка мастер, шаг первый пропущен.
+выполнен clean deploy с новой версией 0.0.3, компиляция и тесты с 1 по 6 пройдены.
+собран jar и произведена загрузка в nexus.  Логи: [SUCCESS Reliz](netology_example-teamcity-build_13.log)
+
+![alt text](image-75.png)
+
+Пункт 14: мёрж ветки feature/add_reply в master (уже сделан).
+![alt text](image-76.png)
+
+Пункт 15: "Убедитесь, что нет собранного артефакта в сборке по ветке master."
+![alt text](image-77.png) - артефакты отсутствуют.
+
+Пункт 16:  "Настройте конфигурацию так, чтобы она собирала .jar в артефакты сборки."
+![alt text](image-78.png)
+
+Пункт 17:  "Проведите повторную сборку мастера, убедитесь, что сбора прошла успешно и артефакты собраны."
+![alt text](image-83.png)
+
+Пункт 18:  "Проверьте, что конфигурация в репозитории содержит все настройки конфигурации из teamcity."
+
+![alt text](image-79.png)  -   увеличили версию до 0.0.4
+![alt text](image-80.png)  -   получили разницу между удаленным репозиторием и локальным.
+![alt text](image-81.png)  -   провели слияние
+![alt text](image-82.png)  -   запушили изменения
+
+Готово.
